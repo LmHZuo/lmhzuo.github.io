@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-06-12T10:40:17.657Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在widow上搭建hexo,并部署到Github</title>
+    <link href="http://yoursite.com/2018/06/11/hexo-deploy/"/>
+    <id>http://yoursite.com/2018/06/11/hexo-deploy/</id>
+    <published>2018-06-11T10:34:38.000Z</published>
+    <updated>2018-06-12T10:40:17.657Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在widow上搭建hexo,并部署到Github&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://hexo.io/zh-cn/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>myHexo</title>
+    <link href="http://yoursite.com/2018/06/11/myHexo/"/>
+    <id>http://yoursite.com/2018/06/11/myHexo/</id>
+    <published>2018-06-11T10:34:38.000Z</published>
+    <updated>2018-06-11T10:34:38.929Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2018/06/11/hello-world/"/>
+    <id>http://yoursite.com/2018/06/11/hello-world/</id>
+    <published>2018-06-11T10:13:42.883Z</published>
+    <updated>2018-06-11T10:13:42.883Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
