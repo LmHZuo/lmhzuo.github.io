@@ -121,6 +121,257 @@
   
   <article class="index-post card" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/19/Nexus搭建Maven私服及使用教程/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="John Doe">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Hexo">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2018/06/19/Nexus搭建Maven私服及使用教程/" itemprop="url"></a>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-06-19T10:21:37+08:00">2018-06-19 10:21:37</time></span>
+        </span>
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      
+      <p>[TOC]</p>
+<h1 id="Nexus-3-x搭建Maven私服及使用教程"><a href="#Nexus-3-x搭建Maven私服及使用教程" class="headerlink" title="Nexus 3.x搭建Maven私服及使用教程"></a>Nexus 3.x搭建Maven私服及使用教程</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">版本</th>
+<th style="text-align:center">备注</th>
+<th style="text-align:center">编制人</th>
+<th style="text-align:center">日期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">V1.0</td>
+<td style="text-align:center">Nexus 3.x搭建Maven私服及使用</td>
+<td style="text-align:center">陈权栋</td>
+<td style="text-align:center">2017-07-07</td>
+</tr>
+</tbody>
+</table>
+<p>广州图灵科技有限公司</p>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>一般maven项目开发，我们所需的所有构件都需要通过maven的中央仓库和第三方的Maven仓库下载到本地。而一个团队中的所有人都重复地从maven仓库下载构件无疑加大了仓库的负载和浪费了外网带宽，如果网速慢的话，还会影响项目的进程。很多情况下，项目的开发都是在内网进行的，连接不到maven仓库怎么办呢？开发的公共构件怎么让其它项目使用？这个时候我们都会选择为自己的团队搭建属于自己的maven私服，这样既节省了网络带宽也会加速项目搭建的进程，当然前提条件就是你的私服中拥有项目所需的所有构件。</p>
+<p>这里的私服是指私有服务器，是架设在局域网的一种特殊的远程仓库，目的是代理远程仓库及部署第三方构件。有了私服之后，当 Maven 需要下载构件时，直接请求私服，私服上存在则下载到本地仓库；否则，私服请求外部的远程仓库，将构件下载到私服，再提供给本地仓库下载（见下图）。</p>
+<p>搭建Maven私服，我们选择的是Nexus Repository OSS。它是一个强大的Maven仓库管理器，它极大地简化了本地内部仓库的维护和外部仓库的访问，最重要的是，它是免费开源的！</p>
+<p><img src="img/私服示例图.png" alt="无效" title="私服示例图"></p>
+<blockquote>
+<p>注：</p>
+</blockquote>
+<blockquote>
+<p>图中的远程仓库处于外网，而私服和本地仓库处于内网</p>
+</blockquote>
+<h2 id="搭建Maven私服前的说明或准备"><a href="#搭建Maven私服前的说明或准备" class="headerlink" title="搭建Maven私服前的说明或准备"></a>搭建Maven私服前的说明或准备</h2><ul>
+<li><p>搭建操作系统为Ubuntu 16.04，Windows也有安装包，但没有尝试过</p>
+</li>
+<li><p>Apache Maven版本为3.3.9，需要提前安装好，安装过程这里不做讲解，有需要自行谷歌或百度</p>
+</li>
+<li><p>Intellij IDEA版本为2017.1.3，用于项目发布构建到私服上的测试</p>
+</li>
+</ul>
+<h2 id="搭建Maven私服步骤"><a href="#搭建Maven私服步骤" class="headerlink" title="搭建Maven私服步骤"></a>搭建Maven私服步骤</h2><h3 id="1、到官网下载Nexus安装包"><a href="#1、到官网下载Nexus安装包" class="headerlink" title="1、到官网下载Nexus安装包"></a>1、到官网下载Nexus安装包</h3><ul>
+<li><p>Nexus Repository OSS是免费开源的，我们这里下载与操作系统相对应的最新版<code>Nexus Repository Manager OSS 3.x - Unix</code></p>
+</li>
+<li><p>其下载链接为：<a href="https://www.sonatype.com/download-oss-sonatype" target="_blank" rel="noopener">https://www.sonatype.com/download-oss-sonatype</a> ，该链接可能需要翻墙，打开得比较慢</p>
+</li>
+</ul>
+<h3 id="2、解压安装Nexus"><a href="#2、解压安装Nexus" class="headerlink" title="2、解压安装Nexus"></a>2、解压安装Nexus</h3><ul>
+<li><p>将下载好的安装包拷贝到要解压的目录下</p>
+</li>
+<li><p>然后在终端进入安装包所在的目录，使用命令<code>tar -zxvf ./nexus-3.3.2-02-unix.tar.gz</code>进行解压</p>
+</li>
+<li><p>解压完后，通过<code>cd nexus</code>命令进入目录，执行<code>ls</code>命令可看到如下图的文件：</p>
+</li>
+</ul>
+<p><img src="img/解压文件.png" alt="无效" title="解压文件"></p>
+<blockquote>
+<p>注：</p>
+</blockquote>
+<blockquote>
+<p>其中，nexus-3.3.2-02目录中存放启动和关闭文件，以及配置文件，而sonatype-work一般存放数据文件，比如构件的数据</p>
+</blockquote>
+<h3 id="3、启动Nexus"><a href="#3、启动Nexus" class="headerlink" title="3、启动Nexus"></a>3、启动Nexus</h3><ul>
+<li><p>在上一步的终端，通过<code>cd nexus-3.3.2-02/bin</code>进入启动文件目录</p>
+</li>
+<li><p>然后，通过命令<code>./nexus start</code>或<code>./nexus run</code>启动Nexus，其中<code>start</code>是后台启动，而<code>run</code>不是，会在终端控制台打印出启动信息</p>
+</li>
+<li><p>启动完成后，打开浏览器，访问<a href="http://localhost:8081/" target="_blank" rel="noopener">http://localhost:8081/</a> 即可看到运行的Nexus，如下图：</p>
+</li>
+</ul>
+<p><img src="img/运行成功.png" alt="无效" title="运行成功"></p>
+<h2 id="Nexus使用"><a href="#Nexus使用" class="headerlink" title="Nexus使用"></a>Nexus使用</h2><h3 id="1、说明"><a href="#1、说明" class="headerlink" title="1、说明"></a>1、说明</h3><ul>
+<li><p>仓库类型说明</p>
+<ul>
+<li><p>group(仓库组类型)：又叫组仓库，用于方便开发人员自己设定仓库</p>
+</li>
+<li><p>hosted(宿主类型)：内部项目的发布仓库（内部开发人员，发布上去存放的仓库），包括为<code>release(发行版)</code>仓库和<code>snapshot(调试版)</code>仓库，创建时最好选择允许重新部署</p>
+</li>
+<li><p>proxy(代理类型)：从远程中央仓库中寻找数据的仓库</p>
+</li>
+<li><p>virtual(虚拟类型)：虚拟仓库（这个基本用不到，重点关注上面三个仓库的使用）</p>
+</li>
+</ul>
+</li>
+<li><p>自带仓库(组)说明</p>
+<ul>
+<li><p>maven-central：proxy类型仓库，是Maven中央库，默认从<a href="https://repo1.maven.org/maven2/" target="_blank" rel="noopener">https://repo1.maven.org/maven2/</a> 拉取jar 包</p>
+</li>
+<li><p>maven-releases：hosted类型仓库，存放私库发行版jar 包</p>
+</li>
+<li><p>maven-snapshots：hosted类型仓库，存放私库快照（调试版本）jar 包</p>
+</li>
+<li><p>maven-public：仓库组类型，把上面三个仓库组合在一起对外提供服务，默认包括<code>maven-central</code>、<code>maven-releases</code>和<code>maven-snapshots</code>三个仓库</p>
+</li>
+</ul>
+</li>
+<li><p>理解图示：</p>
+</li>
+</ul>
+<p><img src="img/理解图示.png" alt="无效" title="理解图示"></p>
+<h3 id="2、登录"><a href="#2、登录" class="headerlink" title="2、登录"></a>2、登录</h3><ul>
+<li>点击右上交的<code>Sign in</code>，输入账号密码（初始化账号为<code>admin</code>，密码为<code>admin123</code>）进行登录，如下图所示：</li>
+</ul>
+<p><img src="img/登录.png" alt="无效" title="登录"></p>
+<blockquote>
+<p>注：</p>
+</blockquote>
+<blockquote>
+<p>登录后建议立即修改密码，点击右上角的<code>admin</code>即可进行修改，这里不做详述</p>
+</blockquote>
+<h3 id="3、添加用户账号"><a href="#3、添加用户账号" class="headerlink" title="3、添加用户账号"></a>3、添加用户账号</h3><ul>
+<li>Nexus允许添加用户账号，然后，对不同的用户进行不同权限的授权，如下图所示：</li>
+</ul>
+<p><img src="img/添加用户.png" alt="无效" title="添加用户"></p>
+<blockquote>
+<p>注：</p>
+</blockquote>
+<blockquote>
+<p>所有字段都是必填的，ID将作为用户名</p>
+</blockquote>
+<blockquote>
+<p>Granted为新建账号进行权限授权，<code>nx-admin</code>为管理员角色，里面配置了最大的权限，不可修改，而<code>nx-anonymous</code>为匿名用户角色，不需要登录，只能查看和下载构件，权限可由管理员进行修改</p>
+</blockquote>
+<blockquote>
+<p>关于权限和角色配置模块，这里就不作介绍了，有兴趣可以查看页面左边的<code>Privileges</code>和<code>Roles</code>菜单</p>
+</blockquote>
+<h3 id="4、将Maven项目CommonUtils发布到Maven私服"><a href="#4、将Maven项目CommonUtils发布到Maven私服" class="headerlink" title="4、将Maven项目CommonUtils发布到Maven私服"></a>4、将Maven项目CommonUtils发布到Maven私服</h3><ul>
+<li>在Maven的配置文件setting.xml的<code>&lt;servers&gt;&lt;/servers&gt;</code>标签中间添加以下配置：</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">server</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">username</span>&gt;</span>admin<span class="tag">&lt;/<span class="name">username</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">password</span>&gt;</span>******<span class="tag">&lt;/<span class="name">password</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">server</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注：</p>
+</blockquote>
+<blockquote>
+<p>其中的id可以任意取，password为Nexus的<code>admin</code>用户的密码，默认为admin123</p>
+</blockquote>
+<ul>
+<li>用Intellij IDEA打开CommonUtils项目，并在pom.xml文件中添加下面配置:</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">distributionManagement</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">repository</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus Release<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">url</span>&gt;</span>http://192.168.1.20:8081/repository/maven-releases/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">repository</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">snapshotRepository</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus Snapshot<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">url</span>&gt;</span>http://192.168.1.20:8081/repository/maven-snapshots/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">snapshotRepository</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">distributionManagement</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注：</p>
+</blockquote>
+<blockquote>
+<p><code>&lt;repository&gt;&lt;/repository&gt;</code>中配置release仓库，<code>&lt;snapshotRepository&gt;&lt;/snapshotRepository&gt;</code>中配置snapshot仓库</p>
+</blockquote>
+<blockquote>
+<p>其中的id就是Maven的setting.xml文件的server的id，用于发布构件到Maven私服时的认证</p>
+</blockquote>
+<blockquote>
+<p>name可以任意取，url则分别对应release仓库和snapshot仓库的地址，url中的IP就是Maven私服的IP地址</p>
+</blockquote>
+<blockquote>
+<p>发布构件到Maven私服时，会根据pom.xml中的<code>&lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;</code>是否有<code>SNAPSHOT</code>选择发布到哪个仓库中，有则发布到snapshot仓库，否则发布到release仓库</p>
+</blockquote>
+<ul>
+<li>打开Intellij IDEA的Maven Projects，双击<code>deploy</code>进行发布构件到Maven私服，如下图所示:</li>
+</ul>
+<p><img src="img/发布构件.png" alt="无效" title="发布构件"></p>
+<blockquote>
+<p>注：</p>
+</blockquote>
+<blockquote>
+<p>发布时，如果pom.xml中的<code>&lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;</code>有<code>SNAPSHOT</code>则发布到snapshot仓库，否则发布到release仓库</p>
+</blockquote>
+<h3 id="5、发布第三方jar包-以发布支付宝依赖为例子"><a href="#5、发布第三方jar包-以发布支付宝依赖为例子" class="headerlink" title="5、发布第三方jar包(以发布支付宝依赖为例子)"></a>5、发布第三方jar包(以发布支付宝依赖为例子)</h3><ul>
+<li>调出终端，执行下面命令</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mvn deploy:deploy-file </span><br><span class="line">  -DgroupId=com.alipay</span><br><span class="line">  -DartifactId=api</span><br><span class="line">  -Dversion=1.0</span><br><span class="line">  -Dpackaging=jar </span><br><span class="line">  -Dfile=/home/quandong/alipay.jar</span><br><span class="line">  -Durl=http://localhost:8081/repository/maven-releases/</span><br><span class="line">  -DrepositoryId=nexus</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注:</p>
+</blockquote>
+<blockquote>
+<p>执行命令前确定安装了Maven</p>
+</blockquote>
+<blockquote>
+<p><code>DgroupId</code>构件的组名</p>
+</blockquote>
+<blockquote>
+<p><code>DartifactId</code>构件名称</p>
+</blockquote>
+<blockquote>
+<p><code>Dversion</code>构件版本号</p>
+</blockquote>
+<blockquote>
+<p><code>Dpackaging</code>构件类型，一般为jar</p>
+</blockquote>
+<blockquote>
+<p><code>Dfile</code>构件所在本地路径</p>
+</blockquote>
+<blockquote>
+<p><code>Durl</code>存放构件的仓库url</p>
+</blockquote>
+<blockquote>
+<p><code>DrepositoryId</code>发布构件时的认证身份，之前在Maven的setting.xml文件中配置的server的id</p>
+</blockquote>
+<h3 id="6、发布结果"><a href="#6、发布结果" class="headerlink" title="6、发布结果"></a>6、发布结果</h3><ul>
+<li>到Maven私服查看发布的构件，如下图所示:</li>
+</ul>
+<p><img src="img/发布结果.png" alt="无效" title="发布结果"></p>
+<h3 id="7、其他项目引用发布的CommonUtils构件-引用api构件也一样"><a href="#7、其他项目引用发布的CommonUtils构件-引用api构件也一样" class="headerlink" title="7、其他项目引用发布的CommonUtils构件(引用api构件也一样)"></a>7、其他项目引用发布的CommonUtils构件(引用api构件也一样)</h3><ul>
+<li>在其他项目的pom.xml文件中引入下面的配置，使得项目可以从Maven私服中下载CommonUtils构件</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">repositories</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">repository</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">id</span>&gt;</span>maven-public<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">name</span>&gt;</span>maven-public<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">url</span>&gt;</span>http://192.168.1.20:8081/repository/maven-public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">snapshots</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">enabled</span>&gt;</span>true<span class="tag">&lt;/<span class="name">enabled</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">snapshots</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">releases</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">enabled</span>&gt;</span>true<span class="tag">&lt;/<span class="name">enabled</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">releases</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">repository</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">repositories</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.turingdi<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commonutils<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注：</p>
+</blockquote>
+<blockquote>
+<p>其中的url是仓库组的url，仓库组中包括了代理仓库、宿主发行版仓库和宿主调试版仓库</p>
+</blockquote>
+<blockquote>
+<p>保存后，项目会自动从Maven私服中下载CommonUtils构件</p>
+</blockquote>
+<blockquote>
+<p><code>dependency</code>的<code>groupId</code>、<code>artifactId</code>和<code>version</code>要和CommonUtils项目的pom.xml文件配置一样，忘记了可以在Nexus上面的对应构件中查看</p>
+</blockquote>
+<p><strong>至此，Nexus搭建Maven私服就完成了</strong></p>
+<p><strong>欢迎阅读，并希望能指出其中的失误之处，感谢!</strong></p>
+
+      
+    </main>
+    <footer class="post-footer">
+      
+    </footer>
+  </article>
+  
+  <article class="index-post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
       <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/15/docker/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="name" content="John Doe">
@@ -645,7 +896,7 @@ hexo n == hexo new
     
     <div class="archives-count">
       <div class="site-count-title">Archives</div>
-      <div><a href="/archives/">5</a></div>
+      <div><a href="/archives/">6</a></div>
     </div>
     
     

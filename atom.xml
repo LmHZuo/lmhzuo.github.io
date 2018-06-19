@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-15T03:45:06.393Z</updated>
+  <updated>2018-06-19T02:18:14.768Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2018/06/19/Nexus%E6%90%AD%E5%BB%BAMaven%E7%A7%81%E6%9C%8D%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    <id>http://yoursite.com/2018/06/19/Nexus搭建Maven私服及使用教程/</id>
+    <published>2018-06-19T02:21:37.368Z</published>
+    <updated>2018-06-19T02:18:14.768Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h1 id=&quot;Nexus-3-x搭建Maven私服及使用教程&quot;&gt;&lt;a href=&quot;#Nexus-3-x搭建Maven私服及使用教程&quot; class=&quot;headerlink&quot; title=&quot;Nexus
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title></title>
