@@ -239,6 +239,20 @@
   </entry>
   
   <entry>
+    <title>myHexo</title>
+    <link href="http://yoursite.com/2018/06/11/myHexo/"/>
+    <id>http://yoursite.com/2018/06/11/myHexo/</id>
+    <published>2018-06-11T10:34:38.000Z</published>
+    <updated>2018-06-11T10:34:38.929Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>在widow上搭建hexo,并部署到Github</title>
     <link href="http://yoursite.com/2018/06/11/hexo-deploy/"/>
     <id>http://yoursite.com/2018/06/11/hexo-deploy/</id>
@@ -256,20 +270,6 @@
 &lt;p&gt;&lt;a href=&quot;https://hexo.io/zh-cn/&quot; target=&quot;_blank&quot;
         
       
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>myHexo</title>
-    <link href="http://yoursite.com/2018/06/11/myHexo/"/>
-    <id>http://yoursite.com/2018/06/11/myHexo/</id>
-    <published>2018-06-11T10:34:38.000Z</published>
-    <updated>2018-06-11T10:34:38.929Z</updated>
-    
-    <summary type="html">
     
     </summary>
     
