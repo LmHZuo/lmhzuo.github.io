@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    <meta name="keywords" content="Life, ARIA, Hexo">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml" />
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/favicons/favicon.ico">
+    
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title> | Hexo</title>
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="default"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header" style="background: #33363b;">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Hexo</a></h1>
+        <h2 class="subtitle"></h2>
+      </div>
+      <div class="logo">
+        <img src="/images/ARIA_logo.png" alt="logo">
+      </div>
+    </div>
+    
+<nav id="nav" class="nav">
+  <a id="nav-toggle" class="nav-toggle"><i class="fas fa-bars"></i></a>
+  <ul id="menu">
+    
+    <li><a href="/">Home</a></li>
+    
+    <li><a href="/archives/">Archives</a></li>
+    
+  </ul>
+</nav>
+
+
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="page-content" class="page-content">
+  <article class="page-article card">
+    <header class="page-header">
+      <h1 class="page-title" itemprop="name headline">
+        <span></span>
+      </h1>
+    </header>
+    <main class="page-main">
+      <div class="page-container">
+        <h1 id="JAVA并发编程与高并发解决方案-并发编程-一"><a href="#JAVA并发编程与高并发解决方案-并发编程-一" class="headerlink" title="JAVA并发编程与高并发解决方案 - 并发编程 一"></a>JAVA并发编程与高并发解决方案 - 并发编程 一</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">版本</th>
+<th style="text-align:center">作者</th>
+<th style="text-align:center">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">2018.4.8</td>
+<td style="text-align:center">chuIllusions</td>
+<td style="text-align:center">首次发布</td>
+</tr>
+</tbody>
+</table>
+<h2 id="学习内容简介"><a href="#学习内容简介" class="headerlink" title="学习内容简介"></a>学习内容简介</h2><h3 id="并发编程知识点"><a href="#并发编程知识点" class="headerlink" title="并发编程知识点"></a>并发编程知识点</h3><p>线程安全、线程封闭、线程调度、同步容器、并发容器、AQS、J.U.C etc.</p>
+<h3 id="高并发解决方案知识点"><a href="#高并发解决方案知识点" class="headerlink" title="高并发解决方案知识点"></a>高并发解决方案知识点</h3><p>扩容、缓存、队列、拆分、服务降级与熔断、数据库切库、分库分表 etc.</p>
+<h3 id="面对人群"><a href="#面对人群" class="headerlink" title="面对人群"></a>面对人群</h3><p>从事JAVA开发的程序员</p>
+<ol>
+<li>对并发和高并发不了解的程序员</li>
+<li>对并发和高并发了解的程序员</li>
+<li>已经是编程高手的程序员</li>
+</ol>
+<h3 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h3><p>构建完整的并发与高并发知识体系</p>
+<ol>
+<li>系统的学习到并发编程的知识及高并发处理思路</li>
+<li>修正之前在不知不觉中犯过的一些并发方面的问题</li>
+<li>规避以后开发中一些并发方面的问题</li>
+<li>对你的知识进行一次更为全面的梳理，完善知识体系</li>
+<li>学习到大量的实际场景案例分析和代码优化技巧</li>
+<li>让你对并发编程和高并发处理有一个质的提升</li>
+<li>将节省你准备面试的时间，让你的面试更有针对性</li>
+<li>可以借鉴一些之前可能没有想到过的解决问题思路和手段</li>
+</ol>
+<h3 id="课程内容安排"><a href="#课程内容安排" class="headerlink" title="课程内容安排"></a>课程内容安排</h3><h4 id="基础知识讲解与核心知识准备"><a href="#基础知识讲解与核心知识准备" class="headerlink" title="基础知识讲解与核心知识准备"></a>基础知识讲解与核心知识准备</h4><p><img src="images/1.jpg" alt=""></p>
+<h4 id="并发及并发的线程安全处理"><a href="#并发及并发的线程安全处理" class="headerlink" title="并发及并发的线程安全处理"></a>并发及并发的线程安全处理</h4><p><img src="images/2.jpg" alt=""></p>
+<h4 id="高并发处理的思路及手段"><a href="#高并发处理的思路及手段" class="headerlink" title="高并发处理的思路及手段"></a>高并发处理的思路及手段</h4><p><img src="images/3.jpg" alt=""></p>
+<h4 id="涉及知识技能"><a href="#涉及知识技能" class="headerlink" title="涉及知识技能"></a>涉及知识技能</h4><p>总体架构：Spring Boot、Maven、JDK8、MySQL</p>
+<p>基础组件：Mybatis、Guava、Lombok、Redis、Kafka</p>
+<p>高级组件(类)：Joda-Time、Atomic包、J.U.C、AQS、ThreadLocal、RateLimiter、Hystrix、ThreadPool、shardbatis、curator、elastic-job …</p>
+<h3 id="场景举例-实现计数功能"><a href="#场景举例-实现计数功能" class="headerlink" title="场景举例 - 实现计数功能"></a>场景举例 - 实现计数功能</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> lombok.extern.slf4j.Slf4j;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.CountDownLatch;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.ExecutorService;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.Executors;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.Semaphore;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Slf</span>4j</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CountExample1</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 请求总数</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> clientTotal = <span class="number">5000</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 同时并发执行的线程数</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> threadTotal = <span class="number">200</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//5000个请求，每次只允许200个请求处理</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="comment">//线程池 + 信号量 进行请求的模拟</span></span><br><span class="line">        <span class="comment">//新建线程池</span></span><br><span class="line">        ExecutorService executorService = Executors.newCachedThreadPool();</span><br><span class="line">        <span class="comment">//定义信号量(后面会进行讲解)</span></span><br><span class="line">        <span class="keyword">final</span> Semaphore semaphore = <span class="keyword">new</span> Semaphore(threadTotal);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; clientTotal ; i++) &#123;</span><br><span class="line">            executorService.execute(() -&gt; &#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    semaphore.acquire();</span><br><span class="line">                    add();</span><br><span class="line">                    semaphore.release();</span><br><span class="line">                &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                    log.error(<span class="string">"exception"</span>, e);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        executorService.shutdown();</span><br><span class="line">        log.info(<span class="string">"count:&#123;&#125;"</span>, count);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        count++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>点击运行结果，每一次结果都是不一样的，并且没有达到结果为5000，而是小于5000</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Slf</span>4j</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HashMapExample</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 请求总数</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> clientTotal = <span class="number">5000</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 同时并发执行的线程数</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> threadTotal = <span class="number">200</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        ExecutorService executorService = Executors.newCachedThreadPool();</span><br><span class="line">        <span class="keyword">final</span> Semaphore semaphore = <span class="keyword">new</span> Semaphore(threadTotal);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; clientTotal; i++) &#123;</span><br><span class="line">            <span class="keyword">final</span> <span class="keyword">int</span> count = i;</span><br><span class="line">            executorService.execute(() -&gt; &#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    <span class="comment">//每次允许threadTotal请求进行处理</span></span><br><span class="line">                    semaphore.acquire();</span><br><span class="line">                    update(count);</span><br><span class="line">                    semaphore.release();</span><br><span class="line">                &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                    log.error(<span class="string">"exception"</span>, e);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        executorService.shutdown();</span><br><span class="line">        log.info(<span class="string">"size:&#123;&#125;"</span>, map.size());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">        map.put(i, i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>点击运行结果，每一次结果都是不一样的，并且Map.size()没有达到结果为5000，而是小于5000</p>
+<p>若上面两个例子中，<code>threadTotal = 1</code> 则会得到我们预期的结果，<code>size() = clientTotal = 5000</code></p>
+<p>总结：当一个线程运行可以得到我们预期的结果，但当多个线程同时进行操作，就会出现并发问题，导致结果异常</p>
+<h3 id="Slf4j"><a href="#Slf4j" class="headerlink" title="@Slf4j"></a>@Slf4j</h3><h4 id="slf4j"><a href="#slf4j" class="headerlink" title="slf4j"></a>slf4j</h4><p>对于一个maven项目。首先要在pom.xml中加入以下依赖项：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.slf4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>slf4j-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.7.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.slf4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>slf4j-log4j12<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.7.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>log4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>log4j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.17<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>slf4j就是众多接口的集合，它不负责具体的日志实现，只在编译时负责寻找合适的日志系统进行绑定。具体有哪些接口，全部都定义在slf4j-api中。</li>
+<li>slf4j-log4j12是链接slf4j-api和log4j中间的适配器。它实现了slf4j-apiz中StaticLoggerBinder接口，从而使得在编译时绑定的是slf4j-log4j12的getSingleton()方法</li>
+<li>log4j是具体的日志系统。通过slf4j-log4j12初始化Log4j，达到最终日志的输出。</li>
+<li>lombok：一个插件，封装了log的get和set，可以直接使用log来输出日志信息。</li>
+</ol>
+<h4 id="slf4j-1"><a href="#slf4j-1" class="headerlink" title="@slf4j"></a>@slf4j</h4><p>如果不想每次都写<code>private  final Logger logger = LoggerFactory.getLogger(XXX.class);</code> 可以用注解<code>@Slf4j</code></p>
+<p>引入依赖，使用方式如上场景举例中代码示例</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>1.16.10<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="解决IDEA使用-Slf4j注入后找不到变量log"><a href="#解决IDEA使用-Slf4j注入后找不到变量log" class="headerlink" title="解决IDEA使用@Slf4j注入后找不到变量log"></a>解决IDEA使用@Slf4j注入后找不到变量log</h4><p>方式一：</p>
+<p>idea中File –&gt; settings –&gt; Plugins –&gt; 点击”Browse repositories” –&gt; 搜索lombok –&gt; Install Lombok Plugins</p>
+<p>若插件安装失败，则可以进行以下安装方式</p>
+<p>方式二：</p>
+<p>去idea官网下载插件 <a href="http://plugins.jetbrains.com/plugin/6317-lombok-plugin" target="_blank" rel="noopener">Lombok Plugin</a> ，到下载区，选择合适的版本下载，我的idea版本为2017.1.4，因此选择插件的版本号为<code>0.16-2017.1.4</code> 下载到文件为<code>lombok-plugin-0.16.zip</code></p>
+<p>注：idea任何插件的版本都需要跟idea版本对应，否则会提示安装失败(本人踩过的坑)</p>
+<p>安装步骤：解压下载到的zip文件，拷贝解压文件到idea安装目录下的<code>plugins</code>文件下，打开idea中的 plugins &gt; 选择 install plugin from disk &gt; 选择刚刚拷贝进去的文件夹中的jar，即可进行安装，安装完成后需要进行重启。</p>
+<h3 id="Lombox"><a href="#Lombox" class="headerlink" title="Lombox"></a>Lombox</h3><h4 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h4><p><a href="https://projectlombok.org/" target="_blank" rel="noopener">Lombok</a>项目是一个java库，可以自动插入到您的编辑器和构建工具中，让您的java变得更加精彩。切勿再次写入另一个getter或equals方法。提前访问未来的Java功能<code>val</code>，等等。</p>
+<p>除了官方介绍中，并不多相关文章，特意挑了<a href="https://blog.csdn.net/l_blackeagle/article/details/62041873" target="_blank" rel="noopener">一篇文章中相关内容</a></p>
+<blockquote>
+<p>lombok 提供了简单的注解的形式来帮助我们简化消除一些必须有但显得很臃肿的 java 代码。特别是相对于 POJO。<br>简单来说，比如我们新建了一个类，然后在其中写了几个字段，然后通常情况下我们需要手动去建立getter和setter方法啊，构造函数啊之类的，lombok的作用就是为了省去我们手动创建这些代码的麻烦，它能够在我们编译源码的时候自动帮我们生成这些方法。</p>
+<p>lombok能够达到的效果就是在源码中不需要写一些通用的方法，但是在编译生成的字节码文件中会帮我们生成这些方法，这就是lombok的神奇作用。</p>
+<p>虽然有人可能会说IDE里面都自带自动生成这些方法的功能，但是使用lombok会使你的代码看起来更加简洁，写起来也更加方便。</p>
+</blockquote>
+<h4 id="常用的注解"><a href="#常用的注解" class="headerlink" title="常用的注解"></a>常用的注解</h4><p>@slf4j、@Setter、@Getter、@NoArgsConstructor(注解在类上：为类提供一个无参的构造方法)、@AllArgsConstructor(注解在类上；为类提供一个全参的构造方法)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@NoArgsConstructor</span> <span class="comment">//注解在类上：为类提供一个无参的构造方法</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span><span class="comment">//注解在类上；为类提供一个全参的构造方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="comment">//@Getter @Setter 注解在属性上；为属性提供 setting 方法 getting方法</span></span><br><span class="line">    <span class="meta">@Setter</span> <span class="meta">@Getter</span> <span class="keyword">private</span> <span class="keyword">int</span> pid;</span><br><span class="line">    <span class="meta">@Setter</span> <span class="meta">@Getter</span> <span class="keyword">private</span> String pname;</span><br><span class="line">    <span class="meta">@Setter</span> <span class="meta">@Getter</span> <span class="keyword">private</span> <span class="keyword">int</span> sage;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="基础知识讲解与核心知识准备-1"><a href="#基础知识讲解与核心知识准备-1" class="headerlink" title="基础知识讲解与核心知识准备"></a>基础知识讲解与核心知识准备</h2><h3 id="并发与高并发基本概念"><a href="#并发与高并发基本概念" class="headerlink" title="并发与高并发基本概念"></a>并发与高并发基本概念</h3><h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><p>​    并发：同时拥有两个或者多个线程，如果程序在单核处理器运行，多个线程将交替地换入或者换出内存，这些线程是同时”存在”的，每个线程都处于执行过程中的某个状态，如果运行在多核处理器上，此时，程序中的每个线程都将会分配到一个处理器核上，因此可以同时运行</p>
+<p>​    高并发：高并发（High Concurrency）是互联网分布式系统架构设计中必须考虑的因素之一，它通常指，通过设计保证系统能够同时并行处理很多请求</p>
+<h4 id="对比："><a href="#对比：" class="headerlink" title="对比："></a>对比：</h4><p>​    并发：多个线程操作相同的资源，保证线程安全，合理使用资源</p>
+<p>​    高并发：服务能同时处理很多请求，提高程序性能；如系统集中收到大量的请求（12306的抢票系统），导致系统在某段时间类执行大量的操作，包括对资源的请求、数据库的操作等等，如果高并发处理不好，不仅仅降低用户的体验度，请求时间变长，同时也可能导致系统宕机，甚至导致OOM（Out Of Memory）异常，如果想要系统适应高并发状态，就要有多个方面进行系统优化，包括硬件、网络、系统架构、开发语言的选取、数据结构的应用、算法的优化等等，这个时候谈论的是如何提供现有程序的性能，对高并发场景提供一些解决方案、手段等等</p>
+<h3 id="CPU多级缓存"><a href="#CPU多级缓存" class="headerlink" title="CPU多级缓存"></a>CPU多级缓存</h3><p>​    在多线程并发环境下，如果不采取特殊手段，普通的累加结果很可能是错的。错的原因可能涉及到计算机原理以及JAVA方面的一些知识。</p>
+<h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p><img src="images/4.jpg" alt=""></p>
+<p>Main Memory : 主存</p>
+<p>Cache : 高速缓存，数据的读取和存储都经过此告诉缓存</p>
+<p>CPU Core :  CPU核心</p>
+<p>Bus :  系统总线</p>
+<p>​    CUP Core 与 Cache 之间有一条快速通道，Main Memory 与 Cache 关联在 Bus 上，同时 Bus 还用于其他组件    的通信，在Cache出现不久后，系统变得更加复杂，Cache与Main Memory中速度的差异拉大，直到加入另一级的Cache，新加入的Cache 比 一级 Cache 更大，但是更慢，由于从加大一级Cache的做法，从经济上是行不通的，所以有了二级Cache，甚至已经有三级 Cache</p>
+<h4 id="为什么需要CPU-CACHE"><a href="#为什么需要CPU-CACHE" class="headerlink" title="为什么需要CPU CACHE?"></a>为什么需要CPU CACHE?</h4><p>​    CPU的频率太快了，快到主存跟不上，这样在处理器时钟周期内，CPU常常需要等待主存，浪费资源，这样会使CPU花费很长时间等待数据到来或把数据写入内存。<strong>所以Cache的出现，是为了环境CPU和内存之间速度的不匹配问题（结构：CPU - &gt; CACHE - &gt; MEMORY）</strong></p>
+<h4 id="CPU-CACHE-意义"><a href="#CPU-CACHE-意义" class="headerlink" title="CPU CACHE 意义"></a>CPU CACHE 意义</h4><p>​    缓存的容量远远小于主存，因此出现缓存不命中的情况在所难免，既然缓存不能包含CPU所需要的所有数据，那么Cache的存在真的有意义吗?</p>
+<p>CPU缓存存在的意义分两点（局部性原理）：</p>
+<ol>
+<li>时间局部性：如果某个数据被访问，那么在不久的将来它很可能被再次访问</li>
+<li>空间局限性：如果某个数据被访问，那么与它相邻的数据很快也可能被访问</li>
+</ol>
+<p>​       缓存的工作原理是当CPU要读取一个数据时，首先从缓存中查找，如果找到就立即读取并送给CPU处理；如果没有找到，就用相对慢的速度内存中读取并送给CPU处理，同时把这个数据所在的数据块调入缓存中，可以使得以后对整块数据的读取都从缓存中进行，不必再调用内存。</p>
+<pre><code>正是这样的读取机制使CPU读取缓存的命中率非常高（大多数CPU可达90%左右），也就是说CPU下一次要读取的数据90%都在缓存中，大约10%需要从内存读取。
+</code></pre><h4 id="缓存一致性（MESI）"><a href="#缓存一致性（MESI）" class="headerlink" title="缓存一致性（MESI）"></a>缓存一致性（MESI）</h4><p>​    缓存一致性用于保证多个CPU Cache之间缓存共享数据的一致性，定义了Cache Line四种状态，而CPU对Cache的四种操作，可能会产生不一致的状态，因此缓存控制器监听到本地操作和远程操作的时候 ，需要对Cache Line作出相应的修改，从而保证数据在多个缓存之间的一致性</p>
+<p>​    Cache Line ： 是cache与内存数据交换的最小单位，根据操作系统一般是32byte或64byte。在MESI协议中，状态可以是M、E、S、I，地址则是cache line中映射的内存地址，数据则是从内存中读取的数据。</p>
+<p>​    MESI其实是四种状态的缩写：M（modify）修改、E（exclusive）独占、S（shared）共享、I（invalid）失效。</p>
+<p>​    状态间的相互转换关系：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">M</th>
+<th style="text-align:center">E</th>
+<th style="text-align:center">S</th>
+<th style="text-align:center">I</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">M</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">√</td>
+</tr>
+<tr>
+<td style="text-align:center">E</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">√</td>
+</tr>
+<tr>
+<td style="text-align:center">S</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+</tr>
+<tr>
+<td style="text-align:center">I</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+</tr>
+</tbody>
+</table>
+<p>​    Cache 操作： MESI协议中，每个cache的控制器不仅知道自己的操作（local read和local write），通过监听也知道其他CPU中cache的操作（remote read和remote write）。对于自己本地缓存有的数据，CPU仅需要发起local操作，否则发起remote操作，从主存中读取数据，cache控制器通过总线监听，仅能够知道其他CPU发起的remote操作，但是如果local操作会导致数据不一致性，cache控制器会通知其他CPU的cache控制器修改状态。</p>
+<blockquote>
+<p>参考文章：<a href="https://blog.csdn.net/reliveit/article/details/50450136" target="_blank" rel="noopener">【并发编程】CPU cache结构和缓存一致性（MESI协议）</a></p>
+</blockquote>
+<h4 id="乱序执行优化"><a href="#乱序执行优化" class="headerlink" title="乱序执行优化"></a>乱序执行优化</h4><p>​    处理器为提高运算速度而做出违背代码原有顺序的优化</p>
+<p>举个例子：</p>
+<ol>
+<li>计算 a <em> b ，a =10 ，b = 200 ，则 result = a </em> b = 2000</li>
+<li>代码编写顺序：a=10 -&gt; b=200 -&gt; result = a * b</li>
+<li><p>CPU乱序执行优化可能会发生执行顺序为：b=200 -&gt; a=10 -&gt; result = a * b</p>
+<pre><code>CPU乱序执行优化不会对结果造成影响，在单核时代，处理器保证做出的优化，不会导致执行的结果远离预期的目标，但是在多核环境下并非如此。首先在多核环境中，同时会有多个核执行指令，每个核的指定都可能会被乱序优化，另外，处理器还引用了L1、L2等缓存机制，没个核都有自己的缓存，这就导致了逻辑次序上后写入内存的数据，未必真的最后写入，最终带来了这样的一个问题：如果我们不做任何防护措施，处理器最终得到的结果和我们逻辑得出的结果大不相同。比如我们在其中的一个核中执行数据写入操作，并在最后写一个标记，用来标记数据已经准备好了，然后从另外一个核上，通过那个标志，来判断数据是否已经就绪，这种做法它就存在一定的风险，标记位先被写入，但数据操作并未完成（可能是计算为完成、也可能是数据没有从缓存刷新到主存当中）， 最终导致另外的核使用了错误的数据。
+</code></pre></li>
+</ol>
+<h3 id="Java-内存模型（Java-Memory-Model，JMM）"><a href="#Java-内存模型（Java-Memory-Model，JMM）" class="headerlink" title="Java 内存模型（Java Memory Model，JMM）"></a>Java 内存模型（Java Memory Model，JMM）</h3><p>​    CPU缓存一致性和乱序执行优化，在多核多并发下，需要额外做很多的事情，才能保证程序的执行，符合我们的预期。那么JVM（Java Virtual Machine (Java虚拟机)）是如何解决这些问题的?为了屏蔽掉各种硬件和操作系统的内存访问差异，实现让Java程序在各种平台下都能达到一致的并发效果，JMV规范中定义了JMM （Java Memory Model (Java 内存模型)）。 JMM是一种规范，它规范了JVM与计算机内存是如何协同工作的，它规定一个线程如何和何时可以看到其他线程修改过的共享变量的值，以及在必须时如何同步的访问共享变量。</p>
+<h4 id="JVM内存分配概念"><a href="#JVM内存分配概念" class="headerlink" title="JVM内存分配概念"></a>JVM内存分配概念</h4><p><img src="images/5.jpg" alt=""></p>
+<center>图 JVM内存分配概念</center>
+
+<p>JVM内存分配的两个概念：Stack（栈）和Heap（堆）。</p>
+<p>​    Java中的Heap是运行时数据区，由垃圾回收负责，它的优势是动态的分配内存大小，生存期也不必事先告诉编    译器，在运行时动态分配内存，Java的垃圾收集器，会自动回收不再使用的数据。但是也有缺点，由于是要在运行时动态分配内存，因此存取速度相对较慢。</p>
+<p>​    Java中的Stack优势是存取速度比Heap要快，仅次于计算机中的寄存器，栈中的数据是可以共享的，但是它的缺点是，存在栈中数据的大小和生存期必须是确定的，缺乏灵活性，主要存放一些基本类型的变量。</p>
+<p>​    JMM要求调用栈和本地变量存放在线程栈中，对象存放在堆上。一个本地变量可能指向一个对象的引用，引用这个本地变量是存放在线程栈上，而对象本身是存放在堆上的。一个对象可能包含方法，这些方法可能包含本地变量，这些本地变量还是存放在线程栈中，即使这些方法所属的对象存放在堆上。一个对象的成员变量可能会随着这个对象自身存放在堆上，不管这个成员对象是原始类型还是引用类型，静态成员变量跟随着类的定义一起存放在堆上。存放在堆上的对象，可以被所持有对这个对象引用线程的访问。</p>
+<p>​    当一个线程可以访问一个对象的时候，它也可以访问该对象的成员变量，如果两个线程同时调用同一个对象的同一个方法，将会都访问该对象的成员变量，但是每一个线程都拥有了这个成员变量的私有拷贝。</p>
+<h4 id="计算机内存硬件架构"><a href="#计算机内存硬件架构" class="headerlink" title="计算机内存硬件架构"></a>计算机内存硬件架构</h4><p><img src="images/6.jpg" alt=""></p>
+<center>计算机硬件架构简单图示</center>
+
+<p>​    CPU，一台现代计算机拥有两个或多个CPU，其中一些CPU还有多核，从这一点可以看出，在一个有两个或多个CPU的现代计算机上，同时运行多个线程是非常有可能的，而且每个CPU在某一个时刻，运行一个线程是肯定没有问题的，这意味着，如果Java程序是多线程的，在Java程序中，每个CPU上一个线程是可能同时并发执行的。</p>
+<p>​    CPU Refisters（寄存器），每个CPU都包含一系列的寄存器，它们是CPU内存的基础，CPU在寄存器中执行操作的速度远大于在主存上执行的速度，这是因为CPU访问寄存器的速度远大于主存。</p>
+<p>​    Cache（高速缓存），由于计算机的存储设备与处理器运算速度之间有着几个数量级的差距，所以现代计算机系统都不得不加入一层读写速度尽可能接近处理器运算速度的高级缓存来作为内存与处理器之间的缓冲，将运算需要使用到的数据复制到缓存中，让运算能快速的进行，当运算结束后，在从缓存同步到内存中。这样处理器就无需等待缓慢的内存读写，CPU访问缓存层的速度快于访问主存的速度，但通常比访问内部寄存器的速度要慢。</p>
+<p>​    Main Memory（主存），随机存取存储器（random access memory，RAM）又称作“随机存储器”，一个计算机包含一个主存，所有的CPU都可以访问主存，主存通常比CPU中的缓存大得多。</p>
+<h4 id="JVM-与-Computer"><a href="#JVM-与-Computer" class="headerlink" title="JVM 与 Computer"></a>JVM 与 Computer</h4><p><img src="images/7.jpg" alt=""></p>
+<p>​    JVM 与 Computer 内存架构存在差异，硬件内存并无区分栈与堆，对于硬件而言，所有的栈和堆都分布在主内存中，可能会出现在高速缓存、寄存器中。     </p>
+<h4 id="内存模型抽象结构"><a href="#内存模型抽象结构" class="headerlink" title="内存模型抽象结构"></a>内存模型抽象结构</h4><p><img src="images/8.jpg" alt=""></p>
+<h4 id="Java内存模型-同步八种操作"><a href="#Java内存模型-同步八种操作" class="headerlink" title="Java内存模型 - 同步八种操作"></a>Java内存模型 - 同步八种操作</h4><ol>
+<li>lock（锁定）：作用于主内存的变量，把一个变量标识为一条线程独占状态</li>
+<li>unlock（解锁）：作用于主内存的变量，把一个处于锁定状态的变量释放出来，释放后的变量才可以被其他线程锁定</li>
+<li>read（读取）：作用于主内存的变量，把一个变量值从主内存传输到线程的工作内存中，以便随后的load动作使用</li>
+<li>load（载入）：作用于工作内存的变量，它把read操作从主内存中得到的变量值存放工作内存的变量副本中</li>
+<li>use（使用）：作用于工作内存的变量，把工作内存中的一个变量值传递给执行引擎</li>
+<li>assign（赋值）：作用于工作内存的变量，它把一个从执行引擎接收到的值赋值给工作内存的变量</li>
+<li>store（存储）：作用于工作内存的变量，把工作内存中的一个变量的值传递到主内存中，以便随后的write的操作</li>
+<li>write（写入）：作用于主内存的变量，它把store操作从工作内存中的一个变量的值传送到主内存的变量中</li>
+</ol>
+<h4 id="Java内存模型-同步规则"><a href="#Java内存模型-同步规则" class="headerlink" title="Java内存模型 - 同步规则"></a>Java内存模型 - 同步规则</h4><ol>
+<li>如果要把一个变量从主内存中复制到工作内存，就需要按顺序地执行read和load操作，如果把变量从工作内存中同步回主内存中，就要按顺序地执行store和write操作，但Java内存模型只要求上述操作必须按顺序执行，而没有保证是连续执行</li>
+<li>不允许read和load、store和write操作之一单独出现</li>
+<li>不允许一个线程丢弃它的最近assign的操作，即变量在工作内存中改变了之后必须同步到主内存中</li>
+<li>不允许一个线程无原因地（没有发生过任何assign操作）把数据从工作内存同步回主内存中</li>
+<li>一个新的变量只能在主内存中诞生，不允许在工作内存中直接使用一个未被初始化（load或assign）的变量。即就是对一个变量实施use和store操作之前，必须先执行过了assign和load操作</li>
+<li>一个变量在同一时刻只允许一条线程对其进行lock操作，但lock操作可以被同一条线程重复执行多次，多次与执行lock后，只有执行相同次数的unlock，变量才会被解锁。lock和unlock必须成对出现</li>
+<li>如果一个变量执行lock操作，将会清空工作内存中此变量的值，在执行引擎使用这个变量前需要重新执行load或assign操作初始化变量的值</li>
+<li>如果一个变量事先没有被lock操作锁定，则不允许对它执行unlock操作；也不允许去unlock一个被其他线程锁定的变量</li>
+<li>对一个变量执行unlock操作之前，必须先把变量同步到主内存中（执行store和write操作）</li>
+</ol>
+<h4 id="Java-内存模型-同步操作与规则"><a href="#Java-内存模型-同步操作与规则" class="headerlink" title="Java 内存模型 - 同步操作与规则"></a>Java 内存模型 - 同步操作与规则</h4><p><img src="images/9.jpg" alt=""></p>
+<h3 id="并发的优势与风险"><a href="#并发的优势与风险" class="headerlink" title="并发的优势与风险"></a>并发的优势与风险</h3><p><img src="images/10.jpg" alt=""></p>
+<h2 id="并发编程与线程安全"><a href="#并发编程与线程安全" class="headerlink" title="并发编程与线程安全"></a>并发编程与线程安全</h2><p>​    代码所在的进程，有多个线程同时运行，而这些线程可能会同时运行同一段代码，如果每次运行结果和单线程预期结果一致，变量值也和预期一致，则认为这是线程安全的。简单的说，就是并发环境下，得到我们期望正确的结果。对应的一个概念就是线程不安全，就是不提供数据访问保护，有可能出现多个线程，先后更改数据，造成所得到的数据是脏数据，也可能是计算错误。</p>
+<h3 id="环境搭建准备"><a href="#环境搭建准备" class="headerlink" title="环境搭建准备"></a>环境搭建准备</h3><h4 id="项目架构"><a href="#项目架构" class="headerlink" title="项目架构"></a>项目架构</h4><p>Spring Boot 项目，<a href="https://start.spring.io" target="_blank" rel="noopener">https://start.spring.io</a></p>
+<h4 id="自定义注解"><a href="#自定义注解" class="headerlink" title="自定义注解"></a>自定义注解</h4><p>​    为方便理解，自定义一些注解，方便理解。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 课程里用来标记【线程安全】的类或者写法</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Target</span>(ElementType.TYPE) <span class="comment">//作用域，作用于类上</span></span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.SOURCE) <span class="comment">//注解存在的范围，编译时忽略</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> ThreadSafe &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//给默认值，方便扩展</span></span><br><span class="line">    <span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> ""</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 课程里用来标记【线程不安全】的类或者写法</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Target</span>(ElementType.TYPE)</span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.SOURCE)</span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> NotThreadSafe &#123;</span><br><span class="line"></span><br><span class="line">    <span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> ""</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 课程里用来标记【推荐】的类或者写法</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Target</span>(ElementType.TYPE)</span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.SOURCE)</span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Recommend &#123;</span><br><span class="line"></span><br><span class="line">    <span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> ""</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 课程里用来标记【不推荐】的类或者写法</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Target</span>(ElementType.TYPE)</span><br><span class="line"><span class="meta">@Retention</span>(RetentionPolicy.SOURCE)</span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> NotRecommend &#123;</span><br><span class="line"></span><br><span class="line">    <span class="function">String <span class="title">value</span><span class="params">()</span> <span class="keyword">default</span> ""</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="并发模拟"><a href="#并发模拟" class="headerlink" title="并发模拟"></a>并发模拟</h3><h4 id="模拟准备工具介绍"><a href="#模拟准备工具介绍" class="headerlink" title="模拟准备工具介绍"></a>模拟准备工具介绍</h4><ol>
+<li>Postman：Http请求模拟工具</li>
+<li>Apache Bench（AB）：Apache附带的工具，测试网站性能</li>
+<li>JMeter：Apache组织开发的压力测试工具</li>
+<li>代码模拟：Semaphore、CountDownLatch等</li>
+</ol>
+<p>服务准备</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/test"</span>)</span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">"test"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Postman"><a href="#Postman" class="headerlink" title="Postman"></a>Postman</h4><p>​    Postman本身是一个Http模拟工具，在并发上并不是专业的</p>
+<p>使用步骤：</p>
+<ol>
+<li>打开Postman访问<code>localhost:8080/test</code>，完成一次服务访问</li>
+<li>找到Collections标签，新建concurrency文件夹，将刚访问的连接Save文件夹中，并点击文件夹进入测试准备</li>
+<li>配置参数，点击Run Concurrency，成功后查看结果</li>
+</ol>
+<p><img src="images/postman-1.png" alt=""></p>
+<p><img src="images/postman-2.png" alt=""></p>
+<p><img src="images/postman-3.png" alt=""></p>
+<h4 id="Apache-Bench-AB"><a href="#Apache-Bench-AB" class="headerlink" title="Apache Bench(AB)"></a>Apache Bench(AB)</h4><p>​    Apache Bench 是 Apache 服务器自带的一个web压力测试工具，简称ab。ab又是一个命令行工具，对发起负载的本机要求很低，根据ab命令可以创建很多的并发访问线程，模拟多个访问者同时对某一URL地址进行访问，因此可以用来测试目标服务器的负载压力。总的来说ab工具小巧简单，上手学习较快，可以提供需要的基本性能指标，但是没有图形化结果，不能监控。</p>
+<h5 id="Windows-7-安装"><a href="#Windows-7-安装" class="headerlink" title="Windows 7 安装"></a>Windows 7 安装</h5><ol>
+<li>首先需要安装Apache服务器，<a href="https://www.apachelounge.com/download/" target="_blank" rel="noopener">点击下载</a></li>
+<li>将下载<code>httpd-2.4.33-win64-VC15.zip</code>解压</li>
+<li>配置环境变量，这里为了方便，我没有配置，直接进入bin目录，运行控制台</li>
+<li>输入ab命名，若出现以下提示则环境准备成功</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">D:\apache\Apache24\bin&gt;ab</span><br><span class="line">ab: wrong number of arguments</span><br><span class="line">Usage: ab [options] [http://]hostname[:port]/path</span><br><span class="line">Options are:</span><br><span class="line">    -n requests     Number of requests to perform</span><br><span class="line">    -c concurrency  Number of multiple requests to make at a time</span><br><span class="line">    -t timelimit    Seconds to max. to spend on benchmarking</span><br><span class="line">                    This implies -n 50000</span><br><span class="line">    -s timeout      Seconds to max. <span class="built_in">wait</span> <span class="keyword">for</span> each response</span><br><span class="line">                    Default is 30 seconds</span><br><span class="line">    -b windowsize   Size of TCP send/receive buffer, <span class="keyword">in</span> bytes</span><br><span class="line">    -B address      Address to <span class="built_in">bind</span> to when making outgoing connections</span><br><span class="line">    -p postfile     File containing data to POST. Remember also to <span class="built_in">set</span> -T</span><br><span class="line">    -u putfile      File containing data to PUT. Remember also to <span class="built_in">set</span> -T</span><br><span class="line">    -T content-type Content-type header to use <span class="keyword">for</span> POST/PUT data, eg.</span><br><span class="line">                    <span class="string">'application/x-www-form-urlencoded'</span></span><br><span class="line">                    Default is <span class="string">'text/plain'</span></span><br><span class="line">    -v verbosity    How much troubleshooting info to <span class="built_in">print</span></span><br><span class="line">    -w              Print out results <span class="keyword">in</span> HTML tables</span><br><span class="line">    -i              Use HEAD instead of GET</span><br><span class="line">    -x attributes   String to insert as table attributes</span><br><span class="line">    -y attributes   String to insert as tr attributes</span><br><span class="line">    -z attributes   String to insert as td or th attributes</span><br><span class="line">    -C attribute    Add cookie, eg. <span class="string">'Apache=1234'</span>. (repeatable)</span><br><span class="line">    -H attribute    Add Arbitrary header line, eg. <span class="string">'Accept-Encoding: gzip'</span></span><br><span class="line">                    Inserted after all normal header lines. (repeatable)</span><br><span class="line">    -A attribute    Add Basic WWW Authentication, the attributes</span><br><span class="line">                    are a colon separated username and password.</span><br><span class="line">    -P attribute    Add Basic Proxy Authentication, the attributes</span><br><span class="line">                    are a colon separated username and password.</span><br><span class="line">    -X proxy:port   Proxyserver and port number to use</span><br><span class="line">    -V              Print version number and <span class="built_in">exit</span></span><br><span class="line">    -k              Use HTTP KeepAlive feature</span><br><span class="line">    -d              Do not show percentiles served table.</span><br><span class="line">    -S              Do not show confidence estimators and warnings.</span><br><span class="line">    -q              Do not show progress when doing more than 150 requests</span><br><span class="line">    -l              Accept variable document length (use this <span class="keyword">for</span> dynamic pages)</span><br><span class="line">    -g filename     Output collected data to gnuplot format file.</span><br><span class="line">    -e filename     Output CSV file with percentages served</span><br><span class="line">    -r              Don<span class="string">'t exit on socket receive errors.</span></span><br><span class="line"><span class="string">    -m method       Method name</span></span><br><span class="line"><span class="string">    -h              Display usage information (this message)</span></span><br></pre></td></tr></table></figure>
+<p>提示：若启动ab.exe时候，提示缺少某种依赖库，则需要安装该依赖库才可进行启动</p>
+<h5 id="运行演示"><a href="#运行演示" class="headerlink" title="运行演示"></a>运行演示</h5><p>运行命令：<code>ab -n 1000 -c 50 http://localhost:8080/test</code></p>
+<p>命令解析：-n 请求总次数 -c 并发数 URL地址</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">D:\apache\Apache24\bin&gt;ab -n 1000 -c 50 http://localhost:8080/test</span><br><span class="line">This is ApacheBench, Version 2.3 &lt;$Revision: 1826891 $&gt;</span><br><span class="line">Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/</span><br><span class="line">Licensed to The Apache Software Foundation, http://www.apache.org/</span><br><span class="line"></span><br><span class="line">Benchmarking localhost (be patient)</span><br><span class="line">Completed 100 requests</span><br><span class="line">Completed 200 requests</span><br><span class="line">Completed 300 requests</span><br><span class="line">Completed 400 requests</span><br><span class="line">Completed 500 requests</span><br><span class="line">Completed 600 requests</span><br><span class="line">Completed 700 requests</span><br><span class="line">Completed 800 requests</span><br><span class="line">Completed 900 requests</span><br><span class="line">Completed 1000 requests</span><br><span class="line">Finished 1000 requests</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Server Software:</span><br><span class="line">Server Hostname:        localhost</span><br><span class="line">Server Port:            8080</span><br><span class="line"></span><br><span class="line">Document Path:          /test</span><br><span class="line">Document Length:        4 bytes</span><br><span class="line"></span><br><span class="line">Concurrency Level:      50                 # 并发量</span><br><span class="line">Time taken for tests:   0.834 seconds      # 整个测试使用的时间</span><br><span class="line">Complete requests:      1000               # 完成请求数</span><br><span class="line">Failed requests:        0                  # 失败请求数</span><br><span class="line">Total transferred:      136000 bytes       # 所有请求响应数据的总和（包括Http 头信息和正文数据长度，服务器流向应用层数据总长度）</span><br><span class="line">HTML transferred:       4000 bytes   # 所有响应数据，正文数据总和</span><br><span class="line">Requests per second:    1198.97 [#/sec] (mean) # 吞吐率，与并发数相关</span><br><span class="line">Time per request:       41.702 [ms] (mean) # 用户平均请求等待时间</span><br><span class="line">Time per request:       0.834 [ms] (mean, across all concurrent requests) # 服务器平均请求等待时间</span><br><span class="line">Transfer rate:          159.24 [Kbytes/sec] received</span><br><span class="line"></span><br><span class="line">Connection Times (ms)</span><br><span class="line">              min  mean[+/-sd] median   max</span><br><span class="line">Connect:        0    0   0.8      0      24</span><br><span class="line">Processing:     1   39  87.7     14     584</span><br><span class="line">Waiting:        0   31  75.8     11     558</span><br><span class="line">Total:          2   39  87.7     14     584</span><br><span class="line"></span><br><span class="line">Percentage of the requests served within a certain time (ms)</span><br><span class="line"><span class="meta">  50%</span><span class="bash">     14</span></span><br><span class="line"><span class="meta">  66%</span><span class="bash">     20</span></span><br><span class="line"><span class="meta">  75%</span><span class="bash">     27</span></span><br><span class="line"><span class="meta">  80%</span><span class="bash">     31</span></span><br><span class="line"><span class="meta">  90%</span><span class="bash">     50</span></span><br><span class="line"><span class="meta">  95%</span><span class="bash">    220</span></span><br><span class="line"><span class="meta">  98%</span><span class="bash">    395</span></span><br><span class="line"><span class="meta">  99%</span><span class="bash">    464</span></span><br><span class="line"><span class="meta"> 100%</span><span class="bash">    584 (longest request)</span></span><br></pre></td></tr></table></figure>
+<h4 id="JMeter"><a href="#JMeter" class="headerlink" title="JMeter"></a>JMeter</h4><p>​    相对于AB来说，JMeter更加强大。Apache JMeter是Apache组织开发的基于Java的压力测试工具。JMeter 可以用于对服务器、网络或对象模拟巨大的负载，来自不同压力类别下测试它们的强度和分析整体性能。</p>
+<blockquote>
+<p>参考文章：<a href="https://www.cnblogs.com/ceshisanren/p/5639895.html" target="_blank" rel="noopener">JMeter使用入门</a></p>
+</blockquote>
+<h5 id="Windows-7-安装-1"><a href="#Windows-7-安装-1" class="headerlink" title="Windows 7 安装"></a>Windows 7 安装</h5><ol>
+<li>进入官网<a href="http://jmeter.apache.org/download_jmeter.cgi" target="_blank" rel="noopener">下载</a></li>
+<li>将下载后的<code>apache-jmeter-4.0.zip</code>解压</li>
+<li>进入解压目录中的bin目录，运行<code>jmeter.bat</code></li>
+</ol>
+<h5 id="运行演示-1"><a href="#运行演示-1" class="headerlink" title="运行演示"></a>运行演示</h5><h6 id="创建线程组"><a href="#创建线程组" class="headerlink" title="创建线程组"></a>创建线程组</h6><p><img src="images/jmeter-1.png" alt=""></p>
+<p><img src="images/jmeter-2.png" alt=""></p>
+<p>Number of Threads(users) : 线程数、虚拟用户数</p>
+<p>Ramp-Up Period(in second) : 虚拟用户增长时长。理解：假设现在有一个考勤系统 ，所有的用户都不是同时登陆的，实际使用场景是在某段时间内，用户会陆陆续续的进行考勤，而这个参数大概理解就是这个意思，考勤是从8点40分到9点10分，那么这个参数就是30分钟*60秒，意味着指定用户请求在规定时间内完成请求。</p>
+<p>Loop Count : 循环次数，每个虚拟用户循环的次数，如果勾选Forever则会一直进行下去，默认是1</p>
+<h6 id="添加请求"><a href="#添加请求" class="headerlink" title="添加请求"></a>添加请求</h6><p><img src="images/jmeter-3.png" alt=""></p>
+<p><img src="images/jmeter-4.png" alt=""></p>
+<p>为请求添加结果监听：图形结果（Graph Results）与查看结果树（View Results Tree）</p>
+<p><img src="images/jmeter-5.png" alt=""></p>
+<h6 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h6><p><img src="images/jmeter-6.png" alt=""></p>
+<p><img src="images/jmeter-7.png" alt=""></p>
+<h4 id="代码模拟"><a href="#代码模拟" class="headerlink" title="代码模拟"></a>代码模拟</h4><h5 id="CountDownLatch"><a href="#CountDownLatch" class="headerlink" title="CountDownLatch"></a>CountDownLatch</h5><p>​    CountDownLatch类位于java.util.concurrent包下，利用它可以实现类似计数器的功能。比如有一个任务A，它要等待其他4个任务执行完毕之后才能执行，此时就可以利用CountDownLatch来实现这种功能了。</p>
+<p><img src="images/countdownlatch-1.png" alt=""></p>
+<p>假设计数器的值为3，线程A调用await()方法之后，当前线程就进入了等待状态， 之后在其他线程中执行countDown()，计数器就会 - 1 ，该操作线程继续执行，当计数器从3变成0之后，线程A继续执行。</p>
+<p>CountDownLatch这个类可以阻塞线程，保证线程在某种特定的条件下，继续执行。</p>
+<h5 id="Semaphore"><a href="#Semaphore" class="headerlink" title="Semaphore"></a>Semaphore</h5><p><img src="images/semaphore-1.png" alt=""></p>
+<p>​    Semaphore翻译成字面意思为 信号量，Semaphore可以阻塞进程并且控制同时访问的线程个数，通过 acquire() 获取一个许可，如果没有就等待，而 release() 释放一个许可。Semaphore其实和锁有点类似，它一般用于控制对某组资源的访问权限。</p>
+<p>​    CountDownLatch与Semaphore在使用时，通常会与线程池配合使用</p>
+<p>​    Semaphore适合控制并发数，CountDownLatch比较适合保证线程执行完后再执行其他处理，因此模拟并发时，使用两者结合起来是最好的。</p>
+<h5 id="并发模拟代码实现"><a href="#并发模拟代码实现" class="headerlink" title="并发模拟代码实现"></a>并发模拟代码实现</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Slf</span>4j</span><br><span class="line"><span class="meta">@NotThreadSafe</span> <span class="comment">//线程不安全的</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConcurrencyTest</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 请求总数</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> clientTotal = <span class="number">5000</span>;</span><br><span class="line">    <span class="comment">// 同时并发执行的线程数</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> threadTotal = <span class="number">200</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        ExecutorService executorService = Executors.newCachedThreadPool();</span><br><span class="line">        <span class="comment">//定义信号量</span></span><br><span class="line">        <span class="keyword">final</span> Semaphore semaphore = <span class="keyword">new</span> Semaphore(threadTotal);</span><br><span class="line">        <span class="comment">//定义计数器闭锁</span></span><br><span class="line">        <span class="keyword">final</span> CountDownLatch countDownLatch = <span class="keyword">new</span> CountDownLatch(clientTotal);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; clientTotal ; i++) &#123;</span><br><span class="line">            executorService.execute(() -&gt; &#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    semaphore.acquire(); <span class="comment">//获取信号量，否则会阻塞</span></span><br><span class="line">                    add();</span><br><span class="line">                    semaphore.release();</span><br><span class="line">                &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                    log.error(<span class="string">"exception"</span>, e);</span><br><span class="line">                &#125;</span><br><span class="line">                countDownLatch.countDown(); <span class="comment">//每执行一次则减1</span></span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        countDownLatch.await();</span><br><span class="line">        executorService.shutdown(); <span class="comment">//关闭线程池</span></span><br><span class="line">        log.info(<span class="string">"count:&#123;&#125;"</span>, count);</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="comment">//线程不安全</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        count++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      </div>
+    </main>
+    <footer class="page-footer"></footer>
+  </article>
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/sidebar_background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="Search" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.png" alt="John Doe">
+  
+  <h1 class="author-name">John Doe</h1>
+  <h2 class="author-description"> </h2>
+  <div class="site-count">
+    
+    <div class="archives-count">
+      <div class="site-count-title">Archives</div>
+      <div><a href="/archives/">13</a></div>
+    </div>
+    
+    
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i>RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+
+
+
+
+<hr>
+<div class="post-toc sidebar-item" id="toc-div">
+  <div><i class="fas fa-list-ol"></i>Table of Contents</div>
+  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JAVA并发编程与高并发解决方案-并发编程-一"><span class="toc-text">JAVA并发编程与高并发解决方案 - 并发编程 一</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#学习内容简介"><span class="toc-text">学习内容简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#并发编程知识点"><span class="toc-text">并发编程知识点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#高并发解决方案知识点"><span class="toc-text">高并发解决方案知识点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#面对人群"><span class="toc-text">面对人群</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#目的"><span class="toc-text">目的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#课程内容安排"><span class="toc-text">课程内容安排</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#基础知识讲解与核心知识准备"><span class="toc-text">基础知识讲解与核心知识准备</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#并发及并发的线程安全处理"><span class="toc-text">并发及并发的线程安全处理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#高并发处理的思路及手段"><span class="toc-text">高并发处理的思路及手段</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#涉及知识技能"><span class="toc-text">涉及知识技能</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#场景举例-实现计数功能"><span class="toc-text">场景举例 - 实现计数功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Slf4j"><span class="toc-text">@Slf4j</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#slf4j"><span class="toc-text">slf4j</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#slf4j-1"><span class="toc-text">@slf4j</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解决IDEA使用-Slf4j注入后找不到变量log"><span class="toc-text">解决IDEA使用@Slf4j注入后找不到变量log</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lombox"><span class="toc-text">Lombox</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#简介："><span class="toc-text">简介：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#常用的注解"><span class="toc-text">常用的注解</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基础知识讲解与核心知识准备-1"><span class="toc-text">基础知识讲解与核心知识准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#并发与高并发基本概念"><span class="toc-text">并发与高并发基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#概念"><span class="toc-text">概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对比："><span class="toc-text">对比：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CPU多级缓存"><span class="toc-text">CPU多级缓存</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#介绍"><span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#为什么需要CPU-CACHE"><span class="toc-text">为什么需要CPU CACHE?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CPU-CACHE-意义"><span class="toc-text">CPU CACHE 意义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#缓存一致性（MESI）"><span class="toc-text">缓存一致性（MESI）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#乱序执行优化"><span class="toc-text">乱序执行优化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java-内存模型（Java-Memory-Model，JMM）"><span class="toc-text">Java 内存模型（Java Memory Model，JMM）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#JVM内存分配概念"><span class="toc-text">JVM内存分配概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#计算机内存硬件架构"><span class="toc-text">计算机内存硬件架构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JVM-与-Computer"><span class="toc-text">JVM 与 Computer</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#内存模型抽象结构"><span class="toc-text">内存模型抽象结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java内存模型-同步八种操作"><span class="toc-text">Java内存模型 - 同步八种操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java内存模型-同步规则"><span class="toc-text">Java内存模型 - 同步规则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java-内存模型-同步操作与规则"><span class="toc-text">Java 内存模型 - 同步操作与规则</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#并发的优势与风险"><span class="toc-text">并发的优势与风险</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#并发编程与线程安全"><span class="toc-text">并发编程与线程安全</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#环境搭建准备"><span class="toc-text">环境搭建准备</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#项目架构"><span class="toc-text">项目架构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#自定义注解"><span class="toc-text">自定义注解</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#并发模拟"><span class="toc-text">并发模拟</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#模拟准备工具介绍"><span class="toc-text">模拟准备工具介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Postman"><span class="toc-text">Postman</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Apache-Bench-AB"><span class="toc-text">Apache Bench(AB)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Windows-7-安装"><span class="toc-text">Windows 7 安装</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#运行演示"><span class="toc-text">运行演示</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JMeter"><span class="toc-text">JMeter</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Windows-7-安装-1"><span class="toc-text">Windows 7 安装</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#运行演示-1"><span class="toc-text">运行演示</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#创建线程组"><span class="toc-text">创建线程组</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#添加请求"><span class="toc-text">添加请求</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#结果分析"><span class="toc-text">结果分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码模拟"><span class="toc-text">代码模拟</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#CountDownLatch"><span class="toc-text">CountDownLatch</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Semaphore"><span class="toc-text">Semaphore</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#并发模拟代码实现"><span class="toc-text">并发模拟代码实现</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+</div>
+
+
+
+    
+    
+    
+<hr>
+<div class="social-link sidebar-item">
+  <div><i class="far fa-address-card"></i>Social Links</p></div>
+  <ul>
+    
+    <li><i class="fas fa-envelope"></i><a href="mailto:youremail@youremailhost" target="_blank">E-Mail</a></li>
+    
+    <li><i class="fab fa-github"></i><a href="https://github.com/" target="_blank">GitHub</a></li>
+    
+    <li><i class="fab fa-weibo"></i><a href="https://weibo.com/" target="_blank">Weibo</a></li>
+    
+  </ul>
+</div>
+
+
+    
+    
+    
+<hr>
+<div class="blogroll sidebar-item">
+  <div><i class="fas fa-link"></i>Blogroll</div>
+  <ul>
+    
+    <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+    
+    <li><a href="https://developer.mozilla.org/" target="_blank">MDN</a></li>
+    
+    <li><a href="https://mozilla.github.io/nunjucks/" target="_blank">Nunjucks</a></li>
+    
+  </ul>
+</div>
+
+
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer" style="background: #33363b;">
+  <div class="container">
+    <div class="back-to-top">
+      <a id="back-to-top"><i class="fas fa-angle-double-up"></i></a>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">John Doe</span><span class="year"><i class="far fa-copyright"></i>2018</span>
+        </div>
+        
+        
+<div class="busuanzi">
+  <span id="busuanzi_container_site_pv"><i class="fas fa-eye"></i><span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv"><i class="fas fa-user"></i><span id="busuanzi_value_site_uv"></span></span><span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i><span id="busuanzi_value_page_pv"></span></span>
+</div>
+
+
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于<i class="fab fa-github-alt"></i><a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>
