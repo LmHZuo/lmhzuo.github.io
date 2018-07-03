@@ -47,7 +47,7 @@
     
     
 <link rel="stylesheet" type="text/css" href="/css/page.css">
-<link rel="stylesheet" type="text/css" href="/css/archive.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
 
     <link rel="stylesheet" type="text/css" href="/css/custom.css">
     <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
@@ -82,7 +82,7 @@
     <script defer type="text/javascript" src="/js/index.js"></script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>归档 | 程序猿的日常</title>
+    <title>JAVA并发编程与高并发解决方案 - 高并发解决方案 | 程序猿的日常</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="default"  data-spy="scroll" data-target=".list-group">
     
@@ -104,7 +104,7 @@
     
     <li><a href="/">首页</a></li>
     
-    <li><a href="/archives/" class="current">归档</a></li>
+    <li><a href="/archives/">归档</a></li>
     
   </ul>
 </nav>
@@ -119,143 +119,95 @@
         <div class="main-container">
           <div class="content">
             
-<div id="archive" class="archive">
-  <div class="archive-container">
-    <h1 class="archive-counter">
-      
-      你已经写了 15 篇文章！
-      
-    </h1>
-    
-    
-    
-    
-    <h1 class="archive-title">2018</h1>
-    
-    <article class="archive-post card" itemscope itemtype="http://schema.org/Article">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/06/26/concurrencyPlan/concurrency_plan/" itemprop="url">JAVA并发编程与高并发解决方案 - 高并发解决方案</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-06-26T10:00:00+08:00">06-26</time>
+<div id="post" class="post">
+  
+  <article class="post-container card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/26/concurrencyPlan/concurrency_plan/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="龙门小左">
+       <meta itemprop="description" content="">
+       <meta itemprop="image" content="/images/avatar.png">
       </span>
-      
-    </article>
-    
-    
-    <article class="archive-post card" itemscope itemtype="http://schema.org/Article">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/06/26/docker/docker/" itemprop="url">docker  安装部署分布式web 前后端分离集群</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-06-26T10:00:00+08:00">06-26</time>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="程序猿的日常">
       </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">JAVA并发编程与高并发解决方案 - 高并发解决方案</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2018-06-26T10:00:00+08:00">2018-06-26 10:00:00</time></span>
+        </span>
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <h1 id="JAVA并发编程与高并发解决方案-高并发解决方案"><a href="#JAVA并发编程与高并发解决方案-高并发解决方案" class="headerlink" title="JAVA并发编程与高并发解决方案 - 高并发解决方案"></a>JAVA并发编程与高并发解决方案 - 高并发解决方案</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">版本</th>
+<th style="text-align:center">作者</th>
+<th style="text-align:center">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">2018.06.26</td>
+<td style="text-align:center">huangzuo</td>
+<td style="text-align:center">首次发布</td>
+</tr>
+</tbody>
+</table>
+<h2 id="学习内容简介"><a href="#学习内容简介" class="headerlink" title="学习内容简介"></a>学习内容简介</h2><pre><code>本章节主要大概介绍了高并发环境下主要处理思路和手段，能够应对何种高并发环境使用什么样的思路和手段方法。主要思路和手段方法有下面几种:
+1.扩容、
+2.缓存、
+3.队列、
+4.拆分、
+5.服务降级与熔断、
+6.数据库切库、
+7.分库分表 etc.
+</code></pre><h3 id="扩容"><a href="#扩容" class="headerlink" title="扩容"></a>扩容</h3><p>  垂直扩容(纵向扩展):提高系统部件能力。对单个服务器，提高cpu速度或者增加内存、存储空间等。但单个服务器扩容能力是有限</p>
+<p>  水平扩容(横向扩容)：增加服务器</p>
+<h3 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h3><p>服务器和数据库的资源是有限的，如何使用有限的资源支持更多的吞吐量，一个有效的方法是使用缓存，下面四个环节都可以使用缓存中的数据，从而减少对服务器的访问和计算量，提高并发量</p>
+<p>用户通过浏览器访问网站，主要路径有:下面图四个节点，每个节点都有缓存，这里只是描述服务端和数据库的缓存<br><img src="images/19.jpg" alt=""></p>
+<h4 id="缓存特征"><a href="#缓存特征" class="headerlink" title="缓存特征"></a>缓存特征</h4><p>缓存数据是从数据库中取的部分数据，缓存中的数据是有限，并有时间等限制，还要保持缓存中的数据和数据库中数据的一致性，所以不得不关注缓存中的一些特征</p>
+<h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3><h3 id="拆分"><a href="#拆分" class="headerlink" title="拆分"></a>拆分</h3><h3 id="服务降级与熔断"><a href="#服务降级与熔断" class="headerlink" title="服务降级与熔断"></a>服务降级与熔断</h3><h3 id="数据库切库"><a href="#数据库切库" class="headerlink" title="数据库切库"></a>数据库切库</h3><h3 id="分库分表"><a href="#分库分表" class="headerlink" title="分库分表"></a>分库分表</h3>
+    </main>
+    <footer class="post-footer">
       
-    </article>
+      
+    </footer>
+  </article>
+  
+  
+<div class="reward" id="reward">
+  <p>坚持原创技术分享，您的支持是我前进的动力！</p>
+  <button id="reward-button" class="button" disable="enable">打赏</button>
+  <div id="qr" class="qr" style="display: none;">
     
     
-    <article class="archive-post card" itemscope itemtype="http://schema.org/Article">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/06/21/concurrency/concurrency-2/" itemprop="url">JAVA并发编程与高并发解决方案 - 并发编程 二</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-06-21T10:00:00+08:00">06-21</time>
-      </span>
-      
-    </article>
-    
-    
-    <article class="archive-post card" itemscope itemtype="http://schema.org/Article">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/06/21/concurrency/concurrency-7/" itemprop="url">JAVA并发编程与高并发解决方案 - 并发编程 七</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-06-21T10:00:00+08:00">06-21</time>
-      </span>
-      
-    </article>
-    
-    
-    <article class="archive-post card" itemscope itemtype="http://schema.org/Article">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/06/21/concurrency/concurrency-6/" itemprop="url">JAVA并发编程与高并发解决方案 - 并发编程 六</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-06-21T10:00:00+08:00">06-21</time>
-      </span>
-      
-    </article>
-    
-    
-    <article class="archive-post card" itemscope itemtype="http://schema.org/Article">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/06/21/concurrency/concurrency-5/" itemprop="url">JAVA并发编程与高并发解决方案 - 并发编程 五</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-06-21T10:00:00+08:00">06-21</time>
-      </span>
-      
-    </article>
-    
-    
-    <article class="archive-post card" itemscope itemtype="http://schema.org/Article">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/06/21/concurrency/concurrency-1/" itemprop="url">JAVA并发编程与高并发解决方案 - 并发编程 一</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-06-21T10:00:00+08:00">06-21</time>
-      </span>
-      
-    </article>
-    
-    
-    <article class="archive-post card" itemscope itemtype="http://schema.org/Article">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/06/21/concurrency/concurrency-4/" itemprop="url">JAVA并发编程与高并发解决方案 - 并发编程 四</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-06-21T10:00:00+08:00">06-21</time>
-      </span>
-      
-    </article>
-    
-    
-    <article class="archive-post card" itemscope itemtype="http://schema.org/Article">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/06/21/concurrency/concurrency-3/" itemprop="url">JAVA并发编程与高并发解决方案 - 并发编程 三</a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-06-21T10:00:00+08:00">06-21</time>
-      </span>
-      
-    </article>
-    
-    
-    <article class="archive-post card" itemscope itemtype="http://schema.org/Article">
-      <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/06/19/Nexus搭建Maven私服及使用教程/" itemprop="url"></a>
-      </h1>
-      
-      <span class="post-date">
-        <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-06-19T10:21:37+08:00">06-19</time>
-      </span>
-      
-    </article>
     
   </div>
+</div>
+
+
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/"><i class="fas fa-angle-right"></i></a>
-  </nav>
+  
+  <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+      
+      <a href="/2018/06/26/docker/docker/" rel="next" title="docker  安装部署分布式web 前后端分离集群"><i class="fas fa-angle-left"></i><span class="nav-title">docker  安装部署分布式web 前后端分离集群</span></a>
+      
+    </div>
+    <div class="post-nav-prev post-nav-item">
+      
+    </div>
+  </div>
+  
   
 </div>
 
@@ -298,6 +250,20 @@
 
 
   <div class="sidebar-sticky">
+    
+    
+
+
+
+
+<hr>
+<div class="post-toc sidebar-item" id="toc-div">
+  <div><i class="fas fa-list-ol"></i>文章目录</div>
+  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JAVA并发编程与高并发解决方案-高并发解决方案"><span class="toc-text">JAVA并发编程与高并发解决方案 - 高并发解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#学习内容简介"><span class="toc-text">学习内容简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#扩容"><span class="toc-text">扩容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缓存"><span class="toc-text">缓存</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#缓存特征"><span class="toc-text">缓存特征</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#队列"><span class="toc-text">队列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#拆分"><span class="toc-text">拆分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#服务降级与熔断"><span class="toc-text">服务降级与熔断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据库切库"><span class="toc-text">数据库切库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分库分表"><span class="toc-text">分库分表</span></a></li></ol></li></ol></li></ol></div>
+</div>
+
+
+
     
     
     

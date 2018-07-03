@@ -104,7 +104,7 @@
     
     <li><a href="/">首页</a></li>
     
-    <li><a href="/archives/">Archives</a></li>
+    <li><a href="/archives/">归档</a></li>
     
   </ul>
 </nav>
@@ -324,7 +324,7 @@
   
 <div class="reward" id="reward">
   <p>坚持原创技术分享，您的支持是我前进的动力！</p>
-  <button id="reward-button" class="button" disable="enable">Reward</button>
+  <button id="reward-button" class="button" disable="enable">打赏</button>
   <div id="qr" class="qr" style="display: none;">
     
     
@@ -343,7 +343,7 @@
     </div>
     <div class="post-nav-prev post-nav-item">
       
-      <a href="/2018/06/21/concurrency/concurrency-5/" rel="prev" title="JAVA并发编程与高并发解决方案 - 并发编程 五"><span class="nav-title">JAVA并发编程与高并发解决方案 - 并发编程 五</span><i class="fas fa-angle-right"></i></a>
+      <a href="/2018/06/21/concurrency/concurrency-1/" rel="prev" title="JAVA并发编程与高并发解决方案 - 并发编程 一"><span class="nav-title">JAVA并发编程与高并发解决方案 - 并发编程 一</span><i class="fas fa-angle-right"></i></a>
       
     </div>
   </div>
@@ -359,7 +359,7 @@
   
   <div class="search">
     <div class="form-group">
-      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="Search" class="form-control"/>
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
     </div>
   </div>
   <div class="search-result-box" id="search-result"></div>
@@ -374,8 +374,8 @@
   <div class="site-count">
     
     <div class="archives-count">
-      <div class="site-count-title">Archives</div>
-      <div><a href="/archives/">13</a></div>
+      <div class="site-count-title">归档</div>
+      <div><a href="/archives/">15</a></div>
     </div>
     
     
@@ -398,7 +398,7 @@
 
 <hr>
 <div class="post-toc sidebar-item" id="toc-div">
-  <div><i class="fas fa-list-ol"></i>Table of Contents</div>
+  <div><i class="fas fa-list-ol"></i>文章目录</div>
   <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JAVA并发编程与高并发解决方案-并发编程-四"><span class="toc-text">JAVA并发编程与高并发解决方案 - 并发编程 四</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#J-U-C-之-AQS"><span class="toc-text">J.U.C 之 AQS</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Introduction"><span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Design"><span class="toc-text">Design</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#同步队列结构分析"><span class="toc-text">同步队列结构分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#同步组件概览"><span class="toc-text">同步组件概览</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CountDownLatch"><span class="toc-text">CountDownLatch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Semaphore"><span class="toc-text">Semaphore</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#INTRODUCTION"><span class="toc-text">INTRODUCTION</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#应用场景"><span class="toc-text">应用场景</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#tryAcquire"><span class="toc-text">tryAcquire</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#源码分析"><span class="toc-text">源码分析</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CyclicBarrier"><span class="toc-text">CyclicBarrier</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Introduction-1"><span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#与CountDownLatch比较"><span class="toc-text">与CountDownLatch比较</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#案例"><span class="toc-text">案例</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#构造函数"><span class="toc-text">构造函数</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ReentrantLock-与-锁"><span class="toc-text">ReentrantLock 与 锁</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#ReentrantLock-可重入锁-和synchronized区别"><span class="toc-text">ReentrantLock(可重入锁)和synchronized区别</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#是否要放弃synchronized"><span class="toc-text">是否要放弃synchronized</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#案例-1"><span class="toc-text">案例</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ReentrantReadWriteLock"><span class="toc-text">ReentrantReadWriteLock</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#StampedLock"><span class="toc-text">StampedLock</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#如何选择锁？"><span class="toc-text">如何选择锁？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Condition"><span class="toc-text">Condition</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
 </div>
 
@@ -409,7 +409,7 @@
     
 <hr>
 <div class="social-link sidebar-item">
-  <div><i class="far fa-address-card"></i>Social Links</p></div>
+  <div><i class="far fa-address-card"></i>社交链接</p></div>
   <ul>
     
     <li><i class="fas fa-envelope"></i><a href="mailto:youremail@youremailhost" target="_blank">E-Mail</a></li>
@@ -427,7 +427,7 @@
     
 <hr>
 <div class="blogroll sidebar-item">
-  <div><i class="fas fa-link"></i>Blogroll</div>
+  <div><i class="fas fa-link"></i>友情链接</div>
   <ul>
     
     <li><a href="https://github.com/" target="_blank">GitHub</a></li>
@@ -476,7 +476,7 @@
           
         </div>
         <div class="powered-by">
-          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
         </div>
       </div>
     </div>
