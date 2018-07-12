@@ -104,7 +104,7 @@
     
     <li><a href="/">首页</a></li>
     
-    <li><a href="/archives/">Archives</a></li>
+    <li><a href="/archives/">归档</a></li>
     
   </ul>
 </nav>
@@ -407,7 +407,7 @@
   
 <div class="reward" id="reward">
   <p>坚持原创技术分享，您的支持是我前进的动力！</p>
-  <button id="reward-button" class="button" disable="enable">Reward</button>
+  <button id="reward-button" class="button" disable="enable">打赏</button>
   <div id="qr" class="qr" style="display: none;">
     
     
@@ -440,7 +440,7 @@
   
   <div class="search">
     <div class="form-group">
-      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="Search" class="form-control"/>
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
     </div>
   </div>
   <div class="search-result-box" id="search-result"></div>
@@ -455,7 +455,7 @@
   <div class="site-count">
     
     <div class="archives-count">
-      <div class="site-count-title">Archives</div>
+      <div class="site-count-title">归档</div>
       <div><a href="/archives/">20</a></div>
     </div>
     
@@ -479,7 +479,7 @@
 
 <hr>
 <div class="post-toc sidebar-item" id="toc-div">
-  <div><i class="fas fa-list-ol"></i>Table of Contents</div>
+  <div><i class="fas fa-list-ol"></i>文章目录</div>
   <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#使用-Maven-Module-搭建spring-boot项目（整合Spring-Security、Spring-Social、spring-OAuth）三"><span class="toc-text">使用 Maven Module 搭建spring boot项目（整合Spring Security、Spring Social、spring OAuth）三</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-Social-开发第三方登陆"><span class="toc-text">Spring Social 开发第三方登陆</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#OAuth-2-0-协议简介"><span class="toc-text">OAuth 2.0 协议简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#协议要解决的问题"><span class="toc-text">协议要解决的问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#协议中的各种角色与运行流程"><span class="toc-text">协议中的各种角色与运行流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#协议中的授权模式"><span class="toc-text">协议中的授权模式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Social"><span class="toc-text">Spring Social</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#基本原理"><span class="toc-text">基本原理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Spring-Social-基本流程"><span class="toc-text">Spring Social 基本流程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Spring-Social-过滤器链"><span class="toc-text">Spring Social 过滤器链</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Spring-Social运行流程"><span class="toc-text">Spring Social运行流程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Spring-Social-各种角色"><span class="toc-text">Spring Social 各种角色</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#UsersConnectionRepository"><span class="toc-text">UsersConnectionRepository</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#数据库表"><span class="toc-text">数据库表</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#属性类创建"><span class="toc-text">属性类创建</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SocialUserDetailsService"><span class="toc-text">SocialUserDetailsService</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#QQ登陆"><span class="toc-text">QQ登陆</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#构造ServiceProvider"><span class="toc-text">构造ServiceProvider</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#API"><span class="toc-text">API</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#OAuth2Operations"><span class="toc-text">OAuth2Operations</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#ServiceProvider"><span class="toc-text">ServiceProvider</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#构造ConnectionFactory"><span class="toc-text">构造ConnectionFactory</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#ApiAdapter"><span class="toc-text">ApiAdapter</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#ConnectionFactory"><span class="toc-text">ConnectionFactory</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#生成QQ配置"><span class="toc-text">生成QQ配置</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#微信登陆"><span class="toc-text">微信登陆</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#构造ServiceProvider-1"><span class="toc-text">构造ServiceProvider</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#API-1"><span class="toc-text">API</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#OAuth2Operations-1"><span class="toc-text">OAuth2Operations</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#AccessGrant"><span class="toc-text">AccessGrant</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#ServiceProvider-1"><span class="toc-text">ServiceProvider</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#构造ConnectionFactory-1"><span class="toc-text">构造ConnectionFactory</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#ApiAdapter-1"><span class="toc-text">ApiAdapter</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#ConnectionFactory-1"><span class="toc-text">ConnectionFactory</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#生成微信配置"><span class="toc-text">生成微信配置</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#社交总配置"><span class="toc-text">社交总配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Spring-Social额外配置"><span class="toc-text">Spring Social额外配置</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#社交注册"><span class="toc-text">社交注册</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#源码分析"><span class="toc-text">源码分析</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#解决方案"><span class="toc-text">解决方案</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#BUG"><span class="toc-text">BUG</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#社交账号的绑定与解绑"><span class="toc-text">社交账号的绑定与解绑</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#绑定信息"><span class="toc-text">绑定信息</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#绑定与解绑"><span class="toc-text">绑定与解绑</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol></div>
 </div>
 
@@ -490,7 +490,7 @@
     
 <hr>
 <div class="social-link sidebar-item">
-  <div><i class="far fa-address-card"></i>Social Links</p></div>
+  <div><i class="far fa-address-card"></i>社交链接</p></div>
   <ul>
     
     <li><i class="fas fa-envelope"></i><a href="mailto:youremail@youremailhost" target="_blank">E-Mail</a></li>
@@ -508,7 +508,7 @@
     
 <hr>
 <div class="blogroll sidebar-item">
-  <div><i class="fas fa-link"></i>Blogroll</div>
+  <div><i class="fas fa-link"></i>友情链接</div>
   <ul>
     
     <li><a href="https://github.com/" target="_blank">GitHub</a></li>
@@ -557,7 +557,7 @@
           
         </div>
         <div class="powered-by">
-          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
         </div>
       </div>
     </div>

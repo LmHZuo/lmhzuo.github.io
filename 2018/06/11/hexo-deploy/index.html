@@ -104,7 +104,7 @@
     
     <li><a href="/">首页</a></li>
     
-    <li><a href="/archives/">Archives</a></li>
+    <li><a href="/archives/">归档</a></li>
     
   </ul>
 </nav>
@@ -241,7 +241,7 @@ hexo n == hexo new
   
 <div class="reward" id="reward">
   <p>坚持原创技术分享，您的支持是我前进的动力！</p>
-  <button id="reward-button" class="button" disable="enable">Reward</button>
+  <button id="reward-button" class="button" disable="enable">打赏</button>
   <div id="qr" class="qr" style="display: none;">
     
     
@@ -276,7 +276,7 @@ hexo n == hexo new
   
   <div class="search">
     <div class="form-group">
-      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="Search" class="form-control"/>
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
     </div>
   </div>
   <div class="search-result-box" id="search-result"></div>
@@ -291,7 +291,7 @@ hexo n == hexo new
   <div class="site-count">
     
     <div class="archives-count">
-      <div class="site-count-title">Archives</div>
+      <div class="site-count-title">归档</div>
       <div><a href="/archives/">20</a></div>
     </div>
     
@@ -315,7 +315,7 @@ hexo n == hexo new
 
 <hr>
 <div class="post-toc sidebar-item" id="toc-div">
-  <div><i class="fas fa-list-ol"></i>Table of Contents</div>
+  <div><i class="fas fa-list-ol"></i>文章目录</div>
   <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#widow上搭建hexo"><span class="toc-text">widow上搭建hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#前提："><span class="toc-text">前提：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Git"><span class="toc-text">安装Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Node-js"><span class="toc-text">安装Node.js</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Hexo"><span class="toc-text">安装Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建Hexo文件夹"><span class="toc-text">创建Hexo文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装依赖包"><span class="toc-text">安装依赖包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地调试"><span class="toc-text">本地调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo目录结构"><span class="toc-text">Hexo目录结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#注意-想访问到图片，需要根据路径把图片放在public目录下面"><span class="toc-text">注意:想访问到图片，需要根据路径把图片放在public目录下面</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#博客实例"><span class="toc-text">博客实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新增加文章"><span class="toc-text">新增加文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主题装换"><span class="toc-text">主题装换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装ARIA主题"><span class="toc-text">安装ARIA主题</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#安装依赖"><span class="toc-text">安装依赖</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#克隆ARIA-themes到themes-aria目录"><span class="toc-text">克隆ARIA themes到themes/aria目录</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#修改Hexo文件夹下-config-yml"><span class="toc-text">修改Hexo文件夹下_config.yml</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Hexo-themes-aria文件夹下复制-config-yml-example-为-config-yml"><span class="toc-text">Hexo/themes/aria文件夹下复制_config.yml.example 为_config.yml</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#重新启动"><span class="toc-text">重新启动</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#部署到Github-上"><span class="toc-text">部署到Github 上</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#注册Github账户"><span class="toc-text">注册Github账户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建一个新的repository"><span class="toc-text">创建一个新的repository</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加reponsitories"><span class="toc-text">添加reponsitories</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#将本地的文件部署（上传）到Github账户中"><span class="toc-text">将本地的文件部署（上传）到Github账户中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意："><span class="toc-text">注意：</span></a></li></ol></li></ol></div>
 </div>
 
@@ -326,7 +326,7 @@ hexo n == hexo new
     
 <hr>
 <div class="social-link sidebar-item">
-  <div><i class="far fa-address-card"></i>Social Links</p></div>
+  <div><i class="far fa-address-card"></i>社交链接</p></div>
   <ul>
     
     <li><i class="fas fa-envelope"></i><a href="mailto:youremail@youremailhost" target="_blank">E-Mail</a></li>
@@ -344,7 +344,7 @@ hexo n == hexo new
     
 <hr>
 <div class="blogroll sidebar-item">
-  <div><i class="fas fa-link"></i>Blogroll</div>
+  <div><i class="fas fa-link"></i>友情链接</div>
   <ul>
     
     <li><a href="https://github.com/" target="_blank">GitHub</a></li>
@@ -393,7 +393,7 @@ hexo n == hexo new
           
         </div>
         <div class="powered-by">
-          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
         </div>
       </div>
     </div>

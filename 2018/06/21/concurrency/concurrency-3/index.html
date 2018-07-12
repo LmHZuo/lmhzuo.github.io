@@ -104,7 +104,7 @@
     
     <li><a href="/">首页</a></li>
     
-    <li><a href="/archives/">Archives</a></li>
+    <li><a href="/archives/">归档</a></li>
     
   </ul>
 </nav>
@@ -387,7 +387,7 @@
   
 <div class="reward" id="reward">
   <p>坚持原创技术分享，您的支持是我前进的动力！</p>
-  <button id="reward-button" class="button" disable="enable">Reward</button>
+  <button id="reward-button" class="button" disable="enable">打赏</button>
   <div id="qr" class="qr" style="display: none;">
     
     
@@ -422,7 +422,7 @@
   
   <div class="search">
     <div class="form-group">
-      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="Search" class="form-control"/>
+      <i class="fas fa-search"></i><input type="search" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
     </div>
   </div>
   <div class="search-result-box" id="search-result"></div>
@@ -437,7 +437,7 @@
   <div class="site-count">
     
     <div class="archives-count">
-      <div class="site-count-title">Archives</div>
+      <div class="site-count-title">归档</div>
       <div><a href="/archives/">20</a></div>
     </div>
     
@@ -461,7 +461,7 @@
 
 <hr>
 <div class="post-toc sidebar-item" id="toc-div">
-  <div><i class="fas fa-list-ol"></i>Table of Contents</div>
+  <div><i class="fas fa-list-ol"></i>文章目录</div>
   <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JAVA并发编程与高并发解决方案-并发编程-三"><span class="toc-text">JAVA并发编程与高并发解决方案 - 并发编程 三</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#线程安全策略"><span class="toc-text">线程安全策略</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#不可变对象"><span class="toc-text">不可变对象</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#final"><span class="toc-text">final</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Collections"><span class="toc-text">Collections</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Guava"><span class="toc-text">Guava</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#线程封闭"><span class="toc-text">线程封闭</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#ThreadLocal"><span class="toc-text">ThreadLocal</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#类分析"><span class="toc-text">类分析</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#工作原理"><span class="toc-text">工作原理</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#多个-ThreadLocal"><span class="toc-text">多个 ThreadLocal</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#应用场景"><span class="toc-text">应用场景</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#关于内存泄露"><span class="toc-text">关于内存泄露</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#项目应用"><span class="toc-text">项目应用</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#常见线程不安全类与写法"><span class="toc-text">常见线程不安全类与写法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#StringBuilder-与-StringBuffer"><span class="toc-text">StringBuilder 与 StringBuffer</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#StringBuilder"><span class="toc-text">StringBuilder</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#StringBuffer"><span class="toc-text">StringBuffer</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#SimpleDateFormat-与-JodaTime"><span class="toc-text">SimpleDateFormat 与 JodaTime</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#SimpleDateFormat"><span class="toc-text">SimpleDateFormat</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#JodaTime"><span class="toc-text">JodaTime</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#总结-1"><span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ArrayList、HashSet、HashMap-等-Collections"><span class="toc-text">ArrayList、HashSet、HashMap 等 Collections</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#List"><span class="toc-text">List</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Set"><span class="toc-text">Set</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Map"><span class="toc-text">Map</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#先检查在执行：if（condition-a-）-handle-a"><span class="toc-text">先检查在执行：if（condition(a)）{ handle(a) }</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#同步容器"><span class="toc-text">同步容器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Vector"><span class="toc-text">Vector</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#HashTable"><span class="toc-text">HashTable</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Collections-1"><span class="toc-text">Collections</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#List-1"><span class="toc-text">List</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Set-1"><span class="toc-text">Set</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Map-1"><span class="toc-text">Map</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#集合的删除"><span class="toc-text">集合的删除</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#同步容器总结"><span class="toc-text">同步容器总结</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#并发容器-J-U-C"><span class="toc-text">并发容器 J.U.C</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#CopyOnWriteArrayList"><span class="toc-text">CopyOnWriteArrayList</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#Introduction"><span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Shortcoming"><span class="toc-text">Shortcoming</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Design-Thinking"><span class="toc-text">Design Thinking</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Read-Operation"><span class="toc-text">Read Operation</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Using"><span class="toc-text">Using</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#CopyOnWriteArraySet"><span class="toc-text">CopyOnWriteArraySet</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ConcurrentSkipListSet"><span class="toc-text">ConcurrentSkipListSet</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ConcurrentHashMap"><span class="toc-text">ConcurrentHashMap</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ConcurrentSkipListMap"><span class="toc-text">ConcurrentSkipListMap</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#concurrentHashMap与ConcurrentSkipListMap性能测试"><span class="toc-text">concurrentHashMap与ConcurrentSkipListMap性能测试</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#J-U-C-内容概览"><span class="toc-text">J.U.C 内容概览</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安全共享策略总结"><span class="toc-text">安全共享策略总结</span></a></li></ol></li></ol></li></ol></li></ol></div>
 </div>
 
@@ -472,7 +472,7 @@
     
 <hr>
 <div class="social-link sidebar-item">
-  <div><i class="far fa-address-card"></i>Social Links</p></div>
+  <div><i class="far fa-address-card"></i>社交链接</p></div>
   <ul>
     
     <li><i class="fas fa-envelope"></i><a href="mailto:youremail@youremailhost" target="_blank">E-Mail</a></li>
@@ -490,7 +490,7 @@
     
 <hr>
 <div class="blogroll sidebar-item">
-  <div><i class="fas fa-link"></i>Blogroll</div>
+  <div><i class="fas fa-link"></i>友情链接</div>
   <ul>
     
     <li><a href="https://github.com/" target="_blank">GitHub</a></li>
@@ -539,7 +539,7 @@
           
         </div>
         <div class="powered-by">
-          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
         </div>
       </div>
     </div>
