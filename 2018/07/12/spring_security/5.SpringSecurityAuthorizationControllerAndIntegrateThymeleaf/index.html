@@ -102,9 +102,9 @@
   <a id="nav-toggle" class="nav-toggle"><i class="fas fa-bars"></i></a>
   <ul id="menu">
     
-    <li><a href="/">首页</a></li>
+    <li><a href="/">首頁</a></li>
     
-    <li><a href="/archives/">归档</a></li>
+    <li><a href="/archives/">歸檔</a></li>
     
   </ul>
 </nav>
@@ -158,7 +158,7 @@
 <tbody>
 <tr>
 <td>V0.1</td>
-<td>谭键胜</td>
+<td>huangz</td>
 <td>2018-04-03</td>
 <td>初稿</td>
 </tr>
@@ -242,7 +242,7 @@
   
 <div class="reward" id="reward">
   <p>坚持原创技术分享，您的支持是我前进的动力！</p>
-  <button id="reward-button" class="button" disable="enable">打赏</button>
+  <button id="reward-button" class="button" disable="enable">打賞</button>
   <div id="qr" class="qr" style="display: none;">
     
     
@@ -256,12 +256,12 @@
   <div class="post-nav">
     <div class="post-nav-next post-nav-item">
       
-      <a href="/2018/07/12/spring_security/4.SpringSecuritySession/" rel="next" title="使用 Maven Module 搭建spring boot项目（整合Spring Security、Spring Social、spring OAuth）四"><i class="fas fa-angle-left"></i><span class="nav-title">使用 Maven Module 搭建spring boot项目（整合Spring Security、Spring Social、spring OAuth）四</span></a>
+      <a href="/2018/07/12/spring_security/1.SpringSecurityRESTful/" rel="next" title="使用 Maven Module 搭建spring boot项目（整合Spring Security、Spring Social、spring OAuth）一"><i class="fas fa-angle-left"></i><span class="nav-title">使用 Maven Module 搭建spring boot项目（整合Spring Security、Spring Social、spring OAuth）一</span></a>
       
     </div>
     <div class="post-nav-prev post-nav-item">
       
-      <a href="/2018/07/12/spring_security/2.SpringSecurityFormAuthentication/" rel="prev" title="使用 Maven Module 搭建spring boot项目（整合Spring Security、Spring Social、spring OAuth）二"><span class="nav-title">使用 Maven Module 搭建spring boot项目（整合Spring Security、Spring Social、spring OAuth）二</span><i class="fas fa-angle-right"></i></a>
+      <a href="/2018/07/12/spring_security/3.SpringSecuritySocial/" rel="prev" title="使用 Maven Module 搭建spring boot项目（整合Spring Security、Spring Social、spring OAuth）三"><span class="nav-title">使用 Maven Module 搭建spring boot项目（整合Spring Security、Spring Social、spring OAuth）三</span><i class="fas fa-angle-right"></i></a>
       
     </div>
   </div>
@@ -292,7 +292,7 @@
   <div class="site-count">
     
     <div class="archives-count">
-      <div class="site-count-title">归档</div>
+      <div class="site-count-title">歸檔</div>
       <div><a href="/archives/">20</a></div>
     </div>
     
@@ -316,7 +316,7 @@
 
 <hr>
 <div class="post-toc sidebar-item" id="toc-div">
-  <div><i class="fas fa-list-ol"></i>文章目录</div>
+  <div><i class="fas fa-list-ol"></i>文章目錄</div>
   <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Spring-Security-权限控制及整合Thymeleaf引擎模板"><span class="toc-text">Spring Security 权限控制及整合Thymeleaf引擎模板</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-Security-权限控制"><span class="toc-text">Spring Security 权限控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Security-对权限的定义"><span class="toc-text">Spring Security 对权限的定义</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#简单规则（权限规则基本不变）"><span class="toc-text">简单规则（权限规则基本不变）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#区分是否登陆"><span class="toc-text">区分是否登陆</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#区分简单角色"><span class="toc-text">区分简单角色</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Spring-Security-中用户的权限设置"><span class="toc-text">Spring Security 中用户的权限设置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Security-授权源码分析"><span class="toc-text">Spring Security 授权源码分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#流程分析"><span class="toc-text">流程分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#授权分析"><span class="toc-text">授权分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#源码分析"><span class="toc-text">源码分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#分析hasRole角色配置"><span class="toc-text">分析hasRole角色配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Security-权限表达式"><span class="toc-text">Spring Security 权限表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#复杂规则权限开发"><span class="toc-text">复杂规则权限开发</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#RBAC模型"><span class="toc-text">RBAC模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#开发自定义的权限模块"><span class="toc-text">开发自定义的权限模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用自定义认证"><span class="toc-text">使用自定义认证</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-Security-整合-Thymeleaf-引擎模板"><span class="toc-text">Spring Security 整合 Thymeleaf 引擎模板</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#目的："><span class="toc-text">目的：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jar包"><span class="toc-text">jar包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#引入测试权限"><span class="toc-text">引入测试权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#页面引用"><span class="toc-text">页面引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#例子"><span class="toc-text">例子</span></a></li></ol></li></ol></li></ol></div>
 </div>
 
@@ -327,7 +327,7 @@
     
 <hr>
 <div class="social-link sidebar-item">
-  <div><i class="far fa-address-card"></i>社交链接</p></div>
+  <div><i class="far fa-address-card"></i>社交鏈接</p></div>
   <ul>
     
     <li><i class="fas fa-envelope"></i><a href="mailto:youremail@youremailhost" target="_blank">E-Mail</a></li>
@@ -345,7 +345,7 @@
     
 <hr>
 <div class="blogroll sidebar-item">
-  <div><i class="fas fa-link"></i>友情链接</div>
+  <div><i class="fas fa-link"></i>友情鏈接</div>
   <ul>
     
     <li><a href="https://github.com/" target="_blank">GitHub</a></li>
@@ -394,7 +394,7 @@
           
         </div>
         <div class="powered-by">
-          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 強力驅動 | 主題 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
         </div>
       </div>
     </div>
