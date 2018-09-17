@@ -46,9 +46,6 @@
     <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
     
     
-<link rel="stylesheet" type="text/css" href="/css/page.css">
-<link rel="stylesheet" type="text/css" href="/css/post.css">
-
     <link rel="stylesheet" type="text/css" href="/css/custom.css">
     <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
     <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
@@ -82,7 +79,7 @@
     <script defer type="text/javascript" src="/js/index.js"></script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>在widow上搭建hexo,并部署到Github | 程序猿的日常</title>
+    <title>程序猿的日常</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang="default"  data-spy="scroll" data-target=".list-group">
     
@@ -119,22 +116,25 @@
         <div class="main-container">
           <div class="content">
             
-<div id="post" class="post">
+
+<div id="index" class="index">
   
-  <article class="post-container card" itemscope itemtype="http://schema.org/Article">
+  <article class="index-post card" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
       <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/11/hexo-deploy/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-       <meta itemprop="name" content="龙门小左">
-       <meta itemprop="description" content="">
-       <meta itemprop="image" content="/images/avatar.png">
+        <meta itemprop="name" content="龙门小左">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.png">
       </span>
       <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-       <meta itemprop="name" content="程序猿的日常">
+        <meta itemprop="name" content="程序猿的日常">
       </span>
     </div>
     <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">在widow上搭建hexo,并部署到Github</h1>
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2018/06/11/hexo-deploy/" itemprop="url">在widow上搭建hexo,并部署到Github</a>
+      </h1>
       <div class="post-meta">
         
         <span class="post-date">
@@ -146,6 +146,7 @@
       </div>
     </header>
     <main class="post-main" itemprop="articleBody">
+      
       <p>在widow上搭建hexo,并部署到Github</p>
 <blockquote>
 <p><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">hexo官网</a>可参考官网中文网站文档和api</p>
@@ -231,37 +232,17 @@ hexo d == hexo deploy
 hexo n == hexo new
 </code></pre>
 
+      
     </main>
     <footer class="post-footer">
-      
       
     </footer>
   </article>
   
   
-<div class="reward" id="reward">
-  <p>坚持原创技术分享，您的支持是我前进的动力！</p>
-  <button id="reward-button" class="button" disable="enable">打赏</button>
-  <div id="qr" class="qr" style="display: none;">
-    
-    
-    
-  </div>
-</div>
-
-
-  
-  
-  <div class="post-nav">
-    <div class="post-nav-next post-nav-item">
-      
-    </div>
-    <div class="post-nav-prev post-nav-item">
-      
-      <a href="/2018/06/11/myHexo/" rel="prev" title="myHexo"><span class="nav-title">myHexo</span><i class="fas fa-angle-right"></i></a>
-      
-    </div>
-  </div>
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
   
   
 </div>
@@ -305,20 +286,6 @@ hexo n == hexo new
 
 
   <div class="sidebar-sticky">
-    
-    
-
-
-
-
-<hr>
-<div class="post-toc sidebar-item" id="toc-div">
-  <div><i class="fas fa-list-ol"></i>文章目录</div>
-  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#widow上搭建hexo"><span class="toc-text">widow上搭建hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#前提："><span class="toc-text">前提：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Git"><span class="toc-text">安装Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Node-js"><span class="toc-text">安装Node.js</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Hexo"><span class="toc-text">安装Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建Hexo文件夹"><span class="toc-text">创建Hexo文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装依赖包"><span class="toc-text">安装依赖包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地调试"><span class="toc-text">本地调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo目录结构"><span class="toc-text">Hexo目录结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#注意-想访问到图片，需要根据路径把图片放在public目录下面"><span class="toc-text">注意:想访问到图片，需要根据路径把图片放在public目录下面</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#博客实例"><span class="toc-text">博客实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新增加文章"><span class="toc-text">新增加文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主题装换"><span class="toc-text">主题装换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装ARIA主题"><span class="toc-text">安装ARIA主题</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#安装依赖"><span class="toc-text">安装依赖</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#克隆ARIA-themes到themes-aria目录"><span class="toc-text">克隆ARIA themes到themes/aria目录</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#修改Hexo文件夹下-config-yml"><span class="toc-text">修改Hexo文件夹下_config.yml</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Hexo-themes-aria文件夹下复制-config-yml-example-为-config-yml"><span class="toc-text">Hexo/themes/aria文件夹下复制_config.yml.example 为_config.yml</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#重新启动"><span class="toc-text">重新启动</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#部署到Github-上"><span class="toc-text">部署到Github 上</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#注册Github账户"><span class="toc-text">注册Github账户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建一个新的repository"><span class="toc-text">创建一个新的repository</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加reponsitories"><span class="toc-text">添加reponsitories</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#将本地的文件部署（上传）到Github账户中"><span class="toc-text">将本地的文件部署（上传）到Github账户中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意："><span class="toc-text">注意：</span></a></li></ol></li></ol></div>
-</div>
-
-
-
     
     
     
