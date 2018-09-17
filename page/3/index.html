@@ -121,7 +121,7 @@
   
   <article class="index-post card" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/11/hexo-deploy/">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/11/myHexo/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="name" content="龙门小左">
         <meta itemprop="description" content="">
@@ -133,7 +133,7 @@
     </div>
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/06/11/hexo-deploy/" itemprop="url">在widow上搭建hexo,并部署到Github</a>
+        <a class="post-title-link post-title-link-external" href="/2018/06/11/myHexo/" itemprop="url">myHexo</a>
       </h1>
       <div class="post-meta">
         
@@ -147,91 +147,7 @@
     </header>
     <main class="post-main" itemprop="articleBody">
       
-      <p>在widow上搭建hexo,并部署到Github</p>
-<blockquote>
-<p><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">hexo官网</a>可参考官网中文网站文档和api</p>
-</blockquote>
-<blockquote>
-<p>相关参考博客:<a href="https://www.cnblogs.com/cherishzy/p/5694658.html" target="_blank" rel="noopener">cherishzy</a></p>
-</blockquote>
-<h1 id="widow上搭建hexo"><a href="#widow上搭建hexo" class="headerlink" title="widow上搭建hexo"></a>widow上搭建hexo</h1><h2 id="前提："><a href="#前提：" class="headerlink" title="前提："></a>前提：</h2><h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p> 前往Git官网下载Windows版本压缩包，下载完成后解压安装。</p>
-<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p> 前往Node.js官方下载网站，下载Node.js官方安装包，下载完成后同样解压安装。</p>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>到目前为止，安装Hexo所需要的环境已将安装完成，下一步只需要安装Hexo便可以了。<br>点击鼠标右键，看是否有Git bash Here选项。如果没有可以前往Git安装根目录，启动git-base.exe也可以。</p>
-<p>在命令行中输入：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
-<p>Hexo 便安装完成了</p>
-<h3 id="创建Hexo文件夹"><a href="#创建Hexo文件夹" class="headerlink" title="创建Hexo文件夹"></a>创建Hexo文件夹</h3><p> 找到想要放置博客的文件夹，比如（F:\Hexo），在该目录下鼠标右击打开Gitbash工具，（右键菜单中没有该选项的可以用cmd命令cd等进入该文件夹）。执行下面的语句，会在F:\Hexo文件夹下创建node_modules文件夹：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure></p>
-<p>这里init后面可以跟文件目录，比如我想在F:\Hexo下创建博客文件夹，那么可以用下面的命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init F:\Hexo</span><br></pre></td></tr></table></figure></p>
-<h3 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h3><p>在Hexo目录下，执行以下命令，你会发现F:\Hexo\node_modules目录下多了好多文件夹<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure></p>
-<h3 id="本地调试"><a href="#本地调试" class="headerlink" title="本地调试"></a>本地调试</h3><p>目前为止，已经搭建好自己的Hexo博客了，但是只能在本机上查看。执行以下两个命令（在F:\Hexo目录下），然后在浏览器中输入 localhost:4000 就可以看到自己的博客了</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate    //打包加载生成html页面</span><br><span class="line"></span><br><span class="line">$ hexo server      //启动服务器</span><br></pre></td></tr></table></figure>
-<h3 id="Hexo目录结构"><a href="#Hexo目录结构" class="headerlink" title="Hexo目录结构"></a>Hexo目录结构</h3><p><img src="img/hexo-deploy/mulu.jpg" alt="Alt text"></p>
-<h4 id="注意-想访问到图片，需要根据路径把图片放在public目录下面"><a href="#注意-想访问到图片，需要根据路径把图片放在public目录下面" class="headerlink" title="注意:想访问到图片，需要根据路径把图片放在public目录下面"></a>注意:想访问到图片，需要根据路径把图片放在public目录下面</h4><h3 id="博客实例"><a href="#博客实例" class="headerlink" title="博客实例"></a>博客实例</h3><p><img src="img/hexo-deploy/blog.jpg" alt="Alt text"></p>
-<h3 id="新增加文章"><a href="#新增加文章" class="headerlink" title="新增加文章"></a>新增加文章</h3><p>  如果想增加新文章怎么做的？有俩种方法</p>
-<blockquote>
-<p> 命令<br>  你可以执行下列命令来创建一篇新文章。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<p>您可以在命令中指定文章的布局（layout），默认为 post，可以通过修改 _config.yml 中的 default_layout 参数来指定默认布局。<br><img src="img/hexo-deploy/newatick.jpg" alt="Alt text"></p>
-<blockquote>
-<p>直接在Hexo\source复制一份md文件</p>
-</blockquote>
-<h3 id="主题装换"><a href="#主题装换" class="headerlink" title="主题装换"></a>主题装换</h3><p> 博客的风格和布局可以随意变动,<br> 访问hexo官网<a href="https://hexo.io/themes/" target="_blank" rel="noopener">themes</a>可看到不同的主题，可随意选择自己喜欢的主题作为自己博客的主题,点击themes图片跳转到使用该主题的例子页面，点击图片下面的标题文字，跳转到github上，不同的themes安装方法不一样，一定要根据README.md文件，下载、安装主题，</p>
-<p> 例子:</p>
-<h4 id="安装ARIA主题"><a href="#安装ARIA主题" class="headerlink" title="安装ARIA主题"></a>安装ARIA主题</h4><p>   首先在themes页面找到ARIA主，点击图片下面ARIA文字，跳转到github页面，阅读README.md文件，根据Usage部分执行命令</p>
-<p>   打开widow下git cmd ，cd 进入E:\Hexo</p>
-<h5 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h5>   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save hexo-renderer-njucks hexo-renderer-stylus hexo-generator-search hexo-generator-feed</span><br></pre></td></tr></table></figure>
-<h5 id="克隆ARIA-themes到themes-aria目录"><a href="#克隆ARIA-themes到themes-aria目录" class="headerlink" title="克隆ARIA themes到themes/aria目录"></a>克隆ARIA themes到themes/aria目录</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/AlynxZhou/hexo-theme-aria themes/aria</span><br></pre></td></tr></table></figure>
-<p>可以查看到Hexo/themes多了aria 文件夹<br><img src="img/hexo-deploy/drict.jpg" alt="Alt text"></p>
-<h5 id="修改Hexo文件夹下-config-yml"><a href="#修改Hexo文件夹下-config-yml" class="headerlink" title="修改Hexo文件夹下_config.yml"></a>修改Hexo文件夹下_config.yml</h5><p>修改theme: aria，并增加需要的配置<br>     <img src="img/hexo-deploy/aria-themes.jpg" alt="Alt text"></p>
-<h5 id="Hexo-themes-aria文件夹下复制-config-yml-example-为-config-yml"><a href="#Hexo-themes-aria文件夹下复制-config-yml-example-为-config-yml" class="headerlink" title="Hexo/themes/aria文件夹下复制_config.yml.example 为_config.yml"></a>Hexo/themes/aria文件夹下复制_config.yml.example 为_config.yml</h5><h5 id="重新启动"><a href="#重新启动" class="headerlink" title="重新启动"></a>重新启动</h5><p>  重新加载生成页面并启动hexo，然后在浏览器中输入 localhost:4000 就可以看aria主题博客</p>
-<pre><code class="bash">$ hexo generate 
-$ hexo server
-</code></pre>
-<p> <img src="img/hexo-deploy/githexo.jpg" alt="Alt text"></p>
-<h1 id="部署到Github-上"><a href="#部署到Github-上" class="headerlink" title="部署到Github 上"></a>部署到Github 上</h1><h2 id="注册Github账户"><a href="#注册Github账户" class="headerlink" title="注册Github账户"></a>注册Github账户</h2><p>前往Github网站，注册一个新用户。用邮箱注册的一定前往邮箱去验证邮件。要不然之后可能会有小问题。</p>
-<h2 id="创建一个新的repository"><a href="#创建一个新的repository" class="headerlink" title="创建一个新的repository"></a>创建一个新的repository</h2><p>在自己的Github主页右下角,创建一个新的repository。比如我的Github用户名为Gitzhaoyang，那么我创建的repository的名字应该是 gitzhaoyang.github.io 。</p>
-<h2 id="添加reponsitories"><a href="#添加reponsitories" class="headerlink" title="添加reponsitories"></a>添加reponsitories</h2><p>这里严重注意:</p>
-<p>一定要以你的Github用户名.github.io创建。假如我没有用lmhzuo.github.io而是用了tuy.github.io，那么当我浏览器访问博客的时候会出现404错误。这里并不是没有部署成功，而是把它部署在了这里:<a href="http://tuy.github.io/tuy.github.io。所以，如果想直接lmhzuo.github.io访问，那么就需要和用户名保持一致" target="_blank" rel="noopener">http://tuy.github.io/tuy.github.io。所以，如果想直接lmhzuo.github.io访问，那么就需要和用户名保持一致</a></p>
-<h2 id="将本地的文件部署（上传）到Github账户中"><a href="#将本地的文件部署（上传）到Github账户中" class="headerlink" title="将本地的文件部署（上传）到Github账户中"></a>将本地的文件部署（上传）到Github账户中</h2><p>编辑本地Hexo目录下文件_comfig.yml，在最后添加如下代码(我使用第二种)</p>
-<ol>
-<li>后续需要输入账号密码<pre><code class="bash">deploy:
- <span class="built_in">type</span>: git
- repository: http://github.com/LmHZuo/lmhzuo.github.io.git
- branch: master
-</code></pre>
-</li>
-<li><p>直接输入账号密码</p>
-<pre><code class="bash">deploy:
- <span class="built_in">type</span>: git
- repository:  https://github账户名:密码@github.com/LmHZuo/lmhzuo.github.io.git
- branch: master
-</code></pre>
-</li>
-</ol>
-<p>.yml文件对格式规范要求很严格，type: repository: branch: 前面有两个空格，冒号后面都有一个空格。</p>
-<p>执行以下指令即可完成部署（如果提示错误，可以看下面注意）：</p>
-<pre><code class="bash">$ hexo generate
-$ hexo deploy  //上传代码到github
-</code></pre>
-<h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a><em>注意：</em></h2><ul>
-<li><p>有些用户没有设置Github的SSH，会导致上面两句失败。SSH的介绍和设置方法可以查看官方教程,配置起来很简单。如果英文看不明白或者过程中出现小问题，可以查看我写的SSH设置教程，是对官方教程的解释和扩展，针对配置过程中的小问题都有解决办法。</p>
-</li>
-<li><p>每次修改本地文件，都需要命令$ hexo generate才能保存。而且每次使用命令都必须在Hexo根目录下使用。</p>
-</li>
-<li><p>如果你在执行$ hexo deloy,如果提示 ERROR Deployer not found: git，那说明你没有安装hexo-deployer-git依赖包，进入F:\Hexo\node_modules发现真的没有hexo-deployer-git，不用担心，只需要输入下面命令创建hexo-deployer-git依赖包，然后再执行hexo deploy就能上传成功了</p>
-<pre><code class="bash">$ npm install hexo-deployer-git --save
-</code></pre>
-</li>
-<li>如果你是windows用户，那么当你执行$ hexo deploy命令的时候，可能会先后出现提示框让你输入你的Github用户名和Github密码，只要输入正确，上传就没有问题。</li>
-</ul>
-<p>好了，现在我们的博客已经在Github上面部署成功了，可以在浏览器访问lmhzuo.github.io试试了。</p>
-<p>提示：</p>
-<p>现在Hexo支持更加简单的命令格式了，比如：</p>
-<pre><code class="bash">hexo s == hexo server
-hexo g == hexo generate
-hexo d == hexo deploy
-hexo n == hexo new
-</code></pre>
-
+      
       
     </main>
     <footer class="post-footer">
